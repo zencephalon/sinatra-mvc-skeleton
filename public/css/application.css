@@ -1,67 +1,44 @@
-/* CSS declarations go here */
-body {font-family: Vollkorn; font-size: 160%; line-height: 160%; }
-h1, h2, h3, h4, h5, h6 {font-family: Georgia; line-height:100%; margin-top: 0.5em; margin-bottom: 0.5em; color: #36AECC; font-style: italic; font-weight: 400;}
-h1 {font-size: 1.8em;}
-h2 {font-size: 1.6em;}
-h3 {font-size: 1.4em;}
-h4 {font-size: 1.3em;}
-h5 {font-size: 1.2em;}
-h6 {font-size: 1.1em;}
-p, pre, blockquote, table, ul, ol, dl {margin-top: .5em; margin-bottom: .5em;}
-ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em; margin-bottom: 0.5em;}
-li {margin: 0.3em auto;}
-ul {margin-left: .5em; padding-left: 0.5em;}
-dt {font-weight: bold;}
-img {border: none;}
-pre {border-left: 1px solid #ccc; margin-left: 0em; padding-left: 0.5em;}
-blockquote {padding: 0.3em; background-color: #E8F2F5; margin-left:0.5em; margin-right:0;}
-th, td {border: 1px solid #ccc; padding: 0.3em;}
-th {background-color: #f0f0f0;}
-hr {border: none; border-top: 1px solid #E8F2F5; width: 100%;}
-del {text-decoration: line-through; color: #777777;}
-.toc li {list-style-type: none;}
-.todo {font-weight: bold; background-color: #f0ece8; color: #a03020;}
-.justleft {text-align: left;}
-.justright {text-align: right;}
-.justcenter {text-align: center;}
-.center {margin-left: auto; margin-right: auto;}
+/* 
+ivory 
+rgb(252,255,245) 
 
-footer { font-size: 0.7em; margin-top: 2em;}
+light green
+rgb(209,219,189)
 
-#content { margin: 0 auto; padding: 0 1em; max-width: 37em; position: relative; width: 61.8%;}
+light seegrean
+rgb(145,170,157) 
 
-a {
-    color: #36AECC;
+turqoise
+rgb(62,96,111) 
+
+Dark Green
+rgb(25,52,65) 
+*/
+
+
+header {
+    width: 100%;
+    background: rgb(145,170,157);
+    padding: 5px 1% 5px 1%;
+
+}
+
+header a {
+    color: white;
+    text-shadow: 1px 1px #000;
+    padding-left: 5px;
+    padding-right: 5px;
     text-decoration: none;
-}
+    font-size: larger;
 
-a:visited {
-    color: #AAA;
 }
+header a:hover, header a:focus {
+    text-decoration: none;
+    color: white;
+    text-shadow: 1.5px 1.5px #000;
 
-a:hover {
-    color: #000;
-    text-decoration: underline;
+
 }
-
-.logo {
-  height: 2em;
-}
-
-code {
-    font-family: Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 1px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    padding: 0px 3px;
-    display: inline-block;
-    color: #52595d;
-    background-color: #E8F2F5;
-    font-size: 40%;
-    line-height: 1.4em;
-    margin-left: -1em;
-    overflow: auto;
+#login-toolbar {
+    float: right;
 }
