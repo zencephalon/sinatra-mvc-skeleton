@@ -7,3 +7,4 @@ class CreateComments < ActiveRecord::Migration
 			t.references :company
 		end
 	end
+end

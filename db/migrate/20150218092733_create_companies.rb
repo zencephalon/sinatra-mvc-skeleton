@@ -4,3 +4,4 @@ class CreateCompanies < ActiveRecord::Migration
 			t.string :name
 		end
 	end
+end
