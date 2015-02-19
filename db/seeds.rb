@@ -1,5 +1,9 @@
 company1 = Company.create(name:"Chase")
 company2 = Company.create(name:"Citi")
+company3 = Company.create(name:"DBC")
+company4 = Company.create(name:"Kaplan")
+
+
 
 user1 = User.create(username: "chase-user1", password: "123", password_confirmation: "123", company_id: company1.id)
 user2 = User.create(username: "citi-user1", password: "123", password_confirmation: "123", company_id: company2.id)

@@ -14,11 +14,13 @@ rgb(62,96,111)
 Dark Green
 rgb(25,52,65) 
 */
-
+#bg{
+   background:  rgb(209,219,189);
+}
 
 header {
     width: 100%;
-    background: rgb(145,170,157);
+    background:  rgb(25,52,65) ;
     padding: 5px 1% 5px 1%;
 
 }
@@ -41,4 +43,71 @@ header a:hover, header a:focus {
 }
 #login-toolbar {
     float: right;
+}
+
+
+
+
+.banner {
+    background: rgb(62,96,111) ;
+    padding: 0;
+    padding-bottom: 20px;
+    background-size: 100% auto;
+    height: 400px;
+
+}
+
+.banner h1 {
+    padding-top: 20px;
+    margin-top: 0; 
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px #000;
+
+}
+
+.box p {
+    color: white;
+}
+
+.box {
+    background: rgba(0,0,0,.4);
+    width: 25%;
+
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 5px;
+    border: 1px white solid;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.box h3 {
+    color: white;
+    text-shadow: 2px 2px #000;
+
+}
+.box a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+#main {
+    margin: 30px 300px;
+    background: none;
+}
+
+
+
+#main div {
+    padding: 20px 0; 
+}
+textarea {
+    width: 100%
 }

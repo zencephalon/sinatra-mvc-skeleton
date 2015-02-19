@@ -1,5 +1,5 @@
 get '/' do
-  erb :welcome
+  erb :welcome, :layout => :"home_layout"
 end
 
 
