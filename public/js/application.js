@@ -57,5 +57,13 @@ $("#logs").click(function(){
 
 });
 
+$("#newContract").click(function(){
+   window.location.href = document.location.origin + "/contracts/new"
+
+
+
+});
+
+
 
 });

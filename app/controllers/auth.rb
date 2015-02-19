@@ -19,11 +19,16 @@ post '/login' do
 end
 
 get '/signup' do
+  @companies = Company.all
+  p @companies
   erb :'login/signup'
 end
 
 post '/signup' do
-  @user = User.create(username: params[:user][:username], password: params[:user][:password], password_confirmation: params[:user][:password_confirmation])
+  puts "\n\n\n\n\n"
+  p params
+  
+  @user = User.create(username: params[:user][:username], password: params[:user][:password], password_confirmation: params[:user][:password_confirmation], company_id: params[:company])
   if @user.username
     session[:user_id] = @user.id
     redirect '/dashboard'

@@ -1,15 +1,17 @@
-<form action="">
-	<input name="status" value="draft" type="hidden">
-	<input name="maker" value="Chase" type="hidden">
-	<select>
-  <option value="Chase">Chase</option>
-  <option value="Citi">Citi</option>
+<form action="/contracts/new" method="POST">
+Name: <input name="name" type="text">
+	<select name="companyID" id="company">
+		<option value="nil">Choose a Company</option>
+	<% @companies.each do |company| %>
+			
+		<option value="<%= company.id %>"><%= company.name %></option>
 
-</select>
+		<% end %>
+	</select>
 <p><p>maker_agreement</p>
-<textarea placeHolder="Party 1 will give $10 million" name="" id="" cols="30" rows="5"></textarea></p>
+<textarea placeHolder="Party 1 will give $10 million" name="maker_agreement" id="" cols="30" rows="5"></textarea></p>
 <p><p>taker_agreement</p>
-<textarea placeHolder="Party 1 will provide services" name="" id="" cols="30" rows="5"></textarea></p>
+<textarea placeHolder="Party 1 will provide services" name="taker_agreement" id="" cols="30" rows="5"></textarea></p>
 
 
 <input value="Create Contract Propoasl" type="submit">

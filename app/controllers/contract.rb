@@ -6,14 +6,18 @@ get '/contracts' do
 end
 
 get '/contracts/new' do
-
+  @companies = Company.all
   erb :'contracts/new'
 end
 
 
 post '/contracts/new' do
 
-  erb :'contracts/new'
+  puts "\n\n\n\n\n\n"
+  p params
+  @contract = Contract.create(name: params[:name], status: "draft", maker_id: current_user.company.id, taker_id: params[:companyID], maker_agreement: params[:maker_agreement], taker_agreement: params[:taker_agreement])
+  redirect '/dashboard'
+
 end
 
 get '/contracts/status/:status' do
@@ -25,6 +29,7 @@ end
 
 
 get '/contracts/:id' do
+    @comments = Comment.where(contract_id: "#{params[:id]}", ref_type: "comment")
 
 	  @contract = Contract.find(params[:id])
 	   erb :'contracts/contract'
