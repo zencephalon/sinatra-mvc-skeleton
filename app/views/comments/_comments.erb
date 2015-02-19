@@ -1,0 +1,10 @@
+<h1>Comments:</h1>
+<% @comments.each do |comment| %>
+<h6>@<%= comment.user.username %> says...</h6>
+<p><%= comment.content %></p>
+<% end %>
+<form action="/contracts/<%=params[:id]%>/comments" method="POST">
+	<textarea name="comment" id="" cols="30" rows="10"></textarea>
+	<input type="submit">
+
+</form>

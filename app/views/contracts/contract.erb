@@ -1,0 +1,32 @@
+
+
+Contract Page
+
+<p>
+<button type="button" id="accept" class="btn btn-default">Accept Proposal</button>
+<button type="button" id="changeProposal" class="btn btn-default">Change Proposal</button>
+<button type="button" id="reject" class="btn btn-default">Reject Proposal</button>
+<button type="button" id="logs" class="btn btn-default">See Logs</button>
+
+
+  </p>
+
+<p>id: <%=@contract.id  %></p>
+<p>name: <%=@contract.name  %></p>
+
+<p>status: <%=@contract.status  %></p>
+<p>Contract Maker: <%=@contract.maker.name   %></p>
+<p>Contract Taker: <%=@contract.taker.name  %></p>
+<p>maker_agreement: <%=@contract.maker_agreement  %></p>
+<p>taker_agreement: <%=@contract.taker_agreement  %></p>
+
+<!-- <p>
+	<h1>Comments</h1>
+	<textarea name="" id="" cols="30" rows="10"></textarea>
+	<p><input type="submit"></p>
+</p>
+ -->
+<%=  erb :'comments/_comments' %>
+
+
+

@@ -1,1 +1,20 @@
-Welcome to my site!
+
+<div class="banner">
+	
+<h1> Welcome to Contract Manager </h1>
+<% if current_user %>
+	<div class="box">
+	<p>Where You Can manage Contracts online.</p>
+	<a href="/dashboard">See your Dashboard</a>
+</div>
+<% else %>
+	<div class="box">
+	<p>Where You Can manage Contracts online.</p>
+	<a href="/signup">Sign Up Today!</a>
+</div>
+<% end %>
+
+
+
+
+</div>

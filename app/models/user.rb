@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password
-  # Remember to create a migration!
+  belongs_to :company
+  has_many :comments
+  has_many :logs
 end

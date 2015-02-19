@@ -1,0 +1,17 @@
+<form action="/signup" method="POST">
+	user: <input type="text" name="user[username]">
+	password: <input type="password" name="user[password]">
+	password_confirm <input type="password" name="user[password_confirmation]">
+	Select Company: 
+
+	<select name="company" id="company">
+		
+	<% @companies.each do |company| %>
+			
+		<option value="<%= company.id %>"><%= company.name %></option>
+
+		<% end %>
+	</select>
+
+	<input type="submit">
+</form>
