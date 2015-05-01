@@ -20,3 +20,4 @@ Card.create([
   {question: "Nebraska",   answer: "Lincoln", deck_id: 2 },
 ])
 
+User.create({:name => "Person", :password => '123'})
