@@ -1,4 +1,4 @@
 <h3> Choose a Deck </h3>
 <% all_decks.each do |deck| %>
-<h4> <a href="/<%=deck.id%>/1"><%= deck.name %> </a></h4>
+<h4> <a href="/1?deck=<%=deck.id%>"><%= deck.name %> </a></h4>
 <%end%>
