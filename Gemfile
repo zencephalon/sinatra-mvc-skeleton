@@ -17,6 +17,7 @@ gem 'rake'
 gem 'shotgun'
 
 group :test do
+  gem 'database_cleaner', '~> 1.4.1'
   gem 'shoulda-matchers'
   gem 'rack-test'
   gem 'rspec'
