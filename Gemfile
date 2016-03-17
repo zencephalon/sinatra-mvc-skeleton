@@ -9,10 +9,9 @@ gem 'sinatra-contrib'
 
 gem 'activesupport'
 gem 'activerecord'
-gem 'bcrypt-ruby'
 
 gem 'rake'
-
+gem 'bcrypt'
 gem 'shotgun'
 
 group :test do
