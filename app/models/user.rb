@@ -5,8 +5,7 @@ class User < ActiveRecord::Base
 
   validates :name, :email, :encrypted_password, presence: true
   validates :email, format: { with: EMAIL_REGEX }
-
-  # include BCrypt
+  validates :name, :email, uniquenss: true
 
   def password
     @password ||= BCrypt::Password.new(password_hash)
@@ -14,7 +13,7 @@ class User < ActiveRecord::Base
 
   def password=(new_password)
     @password = BCrypt::Password.create(new_password)
-    self.password_hash = @password
+    self.encrypted_password = @password
   end
-  
+
 end

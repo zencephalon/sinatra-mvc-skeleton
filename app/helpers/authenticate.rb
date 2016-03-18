@@ -20,9 +20,7 @@ helpers do
 
   def current_user_locations
     if logged_in?
-      Location.find(current_user.id)
-    else
-      Location.all
+      Location.where(user_id: current_user.id)
     end
   end
 

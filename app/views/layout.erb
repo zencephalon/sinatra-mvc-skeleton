@@ -16,8 +16,7 @@
   <scritp src='/js/jquery.js'></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
-</head>
+  <title><%= (title if defined?(title)) || 'My Location' %></title></head>
 <body>
 <div id="content">
   <header>

@@ -1,3 +1,8 @@
+before do
+  @messages ||= {}
+  # @locations ||= {}
+end
+
 get '/users' do
   #display all users
   # if you are logged
@@ -20,18 +25,23 @@ end
 
 post '/users' do
   #create a new user
-  user = User.new(params[:user])
-  if user.valid?
-    user.save
-    update_session user
-    @messages[:alerts] = ["Welcome aboard #{user.name}!"]
-    @items = current_user_items
-    @users = User.all
-    erb :index
+  if params[:password_confirmation] == params[:user]['password']#is this secure?
+    user = User.new(params[:user])
+    if user.valid?
+      user.save
+      update_session user
+      @messages[:alerts] = ["Welcome aboard #{user.name}!"]
+      @locations = current_user_locations
+      erb :profile
+    else
+      @messages[:errors] = user.errors.full_messages
+      clear_session
+      erb :new_user, locals: {title: 'User Registration Error'}
+    end
   else
-    @messages[:errors] = user.errors.full_messages
+    @messages[:alerts] = ["Those passwords don't match!"]
     clear_session
-    erb :register, locals: {title: 'User Registration Error'}
+    erb :new_user, locals: {title: 'User Registration Error'}
   end
 end
 
