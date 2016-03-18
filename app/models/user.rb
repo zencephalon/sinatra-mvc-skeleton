@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
   validates :name, :email, :encrypted_password, presence: true
   validates :email, format: { with: EMAIL_REGEX }
-  validates :name, :email, uniquenss: true
+  validates :name, :email, uniqueness: true
 
   def password
     @password ||= BCrypt::Password.new(password_hash)
