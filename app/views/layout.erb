@@ -13,22 +13,14 @@
   <link rel="stylesheet" href="/css/application.css">
   <!-- Load Vollkorn font -->
   <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <scritp src='/js/jquery.js'></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
-</head>
+  <title><%= (title if defined?(title)) || 'My Location' %></title></head>
 <body>
 <div id="content">
   <header>
-    <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
-    <div id="login-toolbar">
-      <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% else %>
-        <a href="/login">Login</a>
-      <% end %>
+    <%= user_menu %>
   </header>
   <%= yield %>
 </div>

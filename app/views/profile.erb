@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Locations</h1>
+
+  <div class='error'></div>
+
+  <% @locations.each do |location| %>
+    <li>
+      <a href='/locations/<%= location.id %>'><%= location.name %></a>
+      bids: <%= Bid.where(location_id: location.id).length %>
+    </li>
+  <% end %>
