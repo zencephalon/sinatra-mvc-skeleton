@@ -39,3 +39,14 @@ ul.menu li a {
 ul.menu li a:hover {
     background-color: darkgrey;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  margin: auto;
+  height: 50%;
+  width: 50%;
+}

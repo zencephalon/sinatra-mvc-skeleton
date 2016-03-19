@@ -30,8 +30,8 @@ helpers do
         <ul class='menu'>
           <li><a href='/'>Home</a></li> <!-- doesnt work when logged in -->
           <% if logged_in? %>
-            <li><a href='/'>Logout</a></li>
-            <li><a href='/home'>Profile</a></li>
+            <li><a href='/logout'>Logout</a></li>
+            <li><a href='/users/<%= current_user.id %>'>Profile</a></li>
           <% else %>
             <li><a href='/users/new'>Register</a></li>
             <li><a href='/login'>Login</a></li>

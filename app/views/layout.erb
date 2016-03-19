@@ -11,18 +11,21 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
-  <!-- Load Vollkorn font -->
-  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
-  <scritp src='/js/jquery.js'></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUHL7_x-I9EQYuq76Zyy8yYAsY-tnLl5Q&callback=initMap"
+  async defer></script>
 
-  <title><%= (title if defined?(title)) || 'My Location' %></title></head>
+  <title><%= (title if defined?(title)) || 'My Location' %></title>
+</head>
 <body>
-<div id="content">
-  <header>
-    <%= user_menu %>
-  </header>
-  <%= yield %>
-</div>
+  <div id="content">
+    <header>
+      <%= user_menu %>
+    </header>
+    <%= yield %>
+  </div>
+  <div id="map"></div>
+
 </body>
 </html>

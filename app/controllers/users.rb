@@ -15,7 +15,10 @@ end
 
 get '/users/:id' do
   #display a specific user
-
+  if logged_in?
+    @locations = current_user_locations
+    erb :profile
+  end
 end
 
 get '/users/:id/edit' do
