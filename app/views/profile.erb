@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Locations</h1>
+  <h4>Add one!</h4>
+
+  <div class='error'></div>
+
+  <form action='/locations' method='POST'>
+    <label for='location[latitude]'>Latitude:</label>
+    <input type='text' name='location[latitude]'>
+    <label for='location[longitude]'>Longitude:</label>
+    <input type='text' name='location[longitude]'>
+    <input type='submit' value='Add Location'>
+    <ul class='messages'>
+      <% if @messages && @messages[:errors] %>
+        <% @messages[:errors].each do |error| %>
+          <li> <%= error %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </form>
+
+  <ul class='locations'>
+    <% @locations.each do |location| %>
+      <li>
+        <a href='/locations/<%= location.id %>'>
+          latitude: <%= location.latitude %>, longitude: <%= location.longitude %>
+        </a>
+        <form action='/locations' method='POST'>
+          <input type='hidden' name='_method' value='delete'>
+          <input type='hidden' name='location_id' value="<%= location.id %>">
+          <input type='submit' value='delete'>
+        </form>
+      </li>
+    <% end %>
+  </ul>
+
+</div>
