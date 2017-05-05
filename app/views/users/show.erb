@@ -1,0 +1,12 @@
+
+<h1>Page showing User info with option to logout or do other things</h1>
+
+<h1><%= @user.username%> </h1>
+
+<form method = "post" action = "/sessions/:id">
+<input type = "hidden" name = "_method" value = "delete">
+<input type = "submit" value = "logout">
+</form>
+
+
+<a href='/restaurants/new'>DO A THING</a>

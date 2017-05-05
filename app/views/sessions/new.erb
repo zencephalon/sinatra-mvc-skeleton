@@ -1,0 +1,12 @@
+<h1> sessions/new   page </h1>
+<form method = "post" action = "/sessions">
+<label>Username:</label>
+<input type = "text" name = "user[username]">
+<br>
+<label>Password:</label>
+<input type = "password" name = "user[password]">
+<br>
+<input type = "submit", value = "Login">
+</form>
+
+<%= erb :'_errors' %>
