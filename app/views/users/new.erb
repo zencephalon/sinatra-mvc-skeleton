@@ -1,20 +1,10 @@
-<h1>NEW USER PAGE</h1>
-</br>
-</br>
+<h1>New User Page</h1>
 
 <form method = "post" action = "/users">
-<label>username:</label>
-<input type = "text" name = "user[username]">
-</br>
-<label>email:</label>
-<input type = "email" name = "user[email]">
-<br>
-<label>Password:</label>
-<input type = "password" name = "user[password]">
-<br>
-<input type = "submit", value = "Register User">
+    <input type = "text" name = "user[username]" value="<%=@user.username %>" placeholder="enter username"><br>
+    <input type = "email" name = "user[email]" value="<%=@user.email %>" placeholder="enter email"><br>
+    <input type = "password" name = "user[password]" placeholder="enter password"><br>
+    <input type = "submit", value = "Register User">
 </form>
-
-
 
 <%= erb :'_errors' %>

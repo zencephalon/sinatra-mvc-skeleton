@@ -1,0 +1,18 @@
+<h1>Edit user details</h1>
+
+
+<form method="post" action="/users/<%= @user.id %>">
+    <input type="hidden" name="_method" value="put" />
+
+    <label for="username">username:</label><br>
+    <input id="user_name" name="user[username]" type="text" value="<%= @user.username %>"><br>
+
+    <label for="user_email">Email</label><br>
+    <input id="user_email" name="user[email]" type="text" value="<%=@user.email %>"/><br>
+
+    <label for="user_password">Password</label><br>
+    <input id="user_password" name="user[password]" type="password"/>
+
+    <input type="submit" value="Edit User" class="button">
+</form>
+
