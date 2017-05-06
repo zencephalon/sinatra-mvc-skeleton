@@ -4,8 +4,8 @@ end
 
 
 post '/sessions' do
-  @user = User.where(username: params[:user][:username]).first
-  if @user && @user.authenticate?(params[:user][:password])
+  @user = User.where(username: params[:username]).first
+  if @user && @user.authenticate?(params[:password])
     session[:id] = @user.id
     redirect "/users/#{@user.id}"
   else
