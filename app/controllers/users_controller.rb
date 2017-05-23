@@ -39,7 +39,7 @@ get '/users/:id/edit' do
 end
 
 #update
-def update_user
+put '/users/:id' do
   @user = User.find(params[:id])
   @user.update(params[:user])
   if @user.valid?
@@ -53,10 +53,6 @@ end
 # patch '/users/:id' do
 #   update_user
 # end
-
-put '/users/:id' do
-  update_user
-end
 
 
 #delete

@@ -1,4 +1,4 @@
 get '/' do
-  # @restaurants = Restaurant.all
+   @forecasts = Forecast.all
   erb :'index'
 end
