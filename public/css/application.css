@@ -24,14 +24,15 @@ a:active {
   color: red;
 }
 
-.container{
+/*.container{
   display: inline-block;
   border: 1px solid black;
   margin:4px;
   padding:4px;
   vertical-align: top;
   height: 20vh;
-}
+}*/
+
 
 input{
     width: 20%;
@@ -39,6 +40,10 @@ input{
     margin: 10px 0;
     box-sizing: border-box;
     border: 1px solid #ccc;
+    
+    
+border-radius: 3em 1em 5em / 0.5em 2em;
+margin-left: 1em;
 
     outline: none;
 }
