@@ -33,7 +33,19 @@ a:active {
   height: 20vh;
 }
 
+input{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
 
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid #555;
+}
 
 
 

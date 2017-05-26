@@ -58,6 +58,7 @@ end
 #delete
 delete '/users/:id' do
   User.find(params[:id]).destroy!
+  session[:id] = nil
   redirect '/users'
 end
 
