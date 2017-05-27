@@ -29,7 +29,8 @@
   <a href="/sessions/new">login</a> |
   <a href="/users/new">register</a>
   <%else%>
-  <%=current_user.username%> |
+
+<a href="/users/<%=current_user.id%>"><%=current_user.username%></a> |
   <form method = "post" action = "/sessions/<%=session[:id]%>">
     <input type= "hidden" name = "_method" value="delete">
     <button type = "submit"> Log out </button>

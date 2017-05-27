@@ -3,9 +3,12 @@
 
 <h1><%= @user.username%> </h1>
 <h1><%= @user.email%> </h1>
-<form method = "post" action = "/sessions/:id">
-  <input type = "hidden" name = "_method" value = "delete">
-  <input type = "submit" value = "logout">
+
+<a href="/users/<%=@user.id %>/edit">Edit</a>
+
+<form method="post" action="/users/<%=@user.id %>">
+  <input name="_method" type="hidden" value="delete" />
+  <input name="commit" type="submit" value="Delete"/>
 </form>
 
 <a href='/users'>show all users</a>
