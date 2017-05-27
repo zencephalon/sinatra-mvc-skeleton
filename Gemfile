@@ -9,7 +9,8 @@ gem 'sinatra-contrib'
 
 gem 'activesupport'
 gem 'activerecord'
-gem 'bcrypt-ruby'
+gem 'bcrypt'
+gem 'httparty'
 
 gem 'rake'
 

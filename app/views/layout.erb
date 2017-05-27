@@ -23,12 +23,23 @@
 <div id="content">
   <header>
     <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
-    <div id="login-toolbar">
-      <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% else %>
-        <a href="/login">Login</a>
-      <% end %>
+
+<div class='right'>
+  <%if !session[:id]%>
+  <a href="/sessions/new">login</a> |
+  <a href="/users/new">register</a>
+  <%else%>
+
+<a href="/users/<%=current_user.id%>"><%=current_user.username%></a> |
+  <form method = "post" action = "/sessions/<%=session[:id]%>">
+    <input type= "hidden" name = "_method" value="delete">
+    <button type = "submit"> Log out </button>
+  </form>
+<!--  <a href="/sessions/<%=session[:id]%>">logout</a> -->
+  <%end%>
+</div>
+
+
   </header>
   <%= yield %>
 </div>

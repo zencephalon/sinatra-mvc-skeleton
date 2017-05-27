@@ -1,5 +1,67 @@
+.right{
+  float: right;
+  margin-right: 5%;
+  text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.errors{
+  color: red;
+}
+
+/*.container{
+  display: inline-block;
+  border: 1px solid black;
+  margin:4px;
+  padding:4px;
+  vertical-align: top;
+  height: 20vh;
+}*/
+
+
+input{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+
+
+border-radius: 3em 1em 5em / 0.5em 2em;
+margin-left: 1em;
+
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid #555;
+}
+
+
+1db7c15a6b05e4c2
+
+
+
+
+
+
 /* CSS declarations go here */
-body {font-family: Vollkorn; font-size: 160%; line-height: 160%; }
+/*body {font-family: Vollkorn; font-size: 160%; line-height: 160%; }
 h1, h2, h3, h4, h5, h6 {font-family: Georgia; line-height:100%; margin-top: 0.5em; margin-bottom: 0.5em; color: #36AECC; font-style: italic; font-weight: 400;}
 h1 {font-size: 1.8em;}
 h2 {font-size: 1.6em;}
@@ -64,4 +126,9 @@ code {
     line-height: 1.4em;
     margin-left: -1em;
     overflow: auto;
-}
+}*/
+
+
+
+
+
