@@ -1,4 +1,4 @@
 get '/' do
-   @forecasts = Forecast.all
+   # @forecasts = Forecast.all
   erb :'index'
 end
