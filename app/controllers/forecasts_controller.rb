@@ -48,34 +48,34 @@ end
 
 
 
-get '/forecasts/:id' do
-  @forecast = Forecast.find(params[:id])
-  # @text_messages = @forecast.text_messages
-  erb :'forecasts/show'
-end
+# get '/forecasts/:id' do
+#   @forecast = Forecast.find(params[:id])
+#   # @text_messages = @forecast.text_messages
+#   erb :'forecasts/show'
+# end
 
 
-#Edit
-get '/forecasts/:id/edit' do
-  @forecast = Forecast.find(params[:id])
-  erb :'restaurants/edit'
-end
+# #Edit
+# get '/forecasts/:id/edit' do
+#   @forecast = Forecast.find(params[:id])
+#   erb :'forecasts/edit'
+# end
 
-put '/forecasts/:id' do
-@forecast = Forecast.find(params[:id])
-@forecast.update_attributes(params[:forecast])
-  if @forecast.save
-    redirect "/"
-  else
-    @errors = @restaurant.errors.full_messages
-    erb :'forecasts/edit'
-  end
-end
+# put '/forecasts/:id' do
+# @forecast = Forecast.find(params[:id])
+# @forecast.update_attributes(params[:forecast])
+#   if @forecast.save
+#     redirect "/"
+#   else
+#     @errors = @restaurant.errors.full_messages
+#     erb :'forecasts/edit'
+#   end
+# end
 
-#Delete
-delete '/forecast/:id' do
-  @forecast = Forecast.find(params[:id])
-  @forecast.destroy
-  redirect '/'
-end
+# #Delete
+# delete '/forecast/:id' do
+#   @forecast = Forecast.find(params[:id])
+#   @forecast.destroy
+#   redirect '/'
+# end
 
