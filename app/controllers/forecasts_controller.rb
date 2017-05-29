@@ -1,20 +1,48 @@
+
+require 'rubygems' # not necessary with ruby 1.9 but included for completeness
+require 'twilio-ruby'
+
 get '/forecasts'  do
-  @forecasts = Forecasts.all
+  @forecasts = Forecast.all
 end
 
 
 get '/forecasts/new' do
-  erb '/forecasts/new'
+  @forecast = Forecast.new
+  erb :'/forecasts/new'
 end
 
 
 post '/forecasts' do
-  @forecast = Forecasts.new(params[:forecast])
-  if @forecast.save
-    redirect "forecasts"
+  @forecast = Forecast.new(params[:forecast])
+  if @forecast
+    country = @forecast.country.capitalize
+    city = (@forecast.city).split.map(&:capitalize).join('_')
+
+   @weather = @forecast.response_weather(country, city)
+   @temp = @forecast.response_temp(country, city)
+   @wind = @forecast.response_wind(country, city)
+
+
+account_sid = ''
+auth_token = ''
+
+# set up a client to talk to the Twilio REST API
+client = Twilio::REST::Client.new account_sid, auth_token
+client.account.messages.create({
+  :from => '',
+  :to => '',
+  :body => "The weather in #{city} is #{@weather}. The temp is #{@temp}, wind: #{@wind}" ,
+  # :media_url => 'https://climacons.herokuapp.com/clear.png'
+})
+
+
+
+    erb :"/index"
+
   else
     @errors = @forecast.full_messages
-    erb '/forecasts/new'
+    erb :'/forecasts/new'
   end
 end
 

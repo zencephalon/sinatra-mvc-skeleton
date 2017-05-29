@@ -11,6 +11,7 @@ gem 'activesupport'
 gem 'activerecord'
 gem 'bcrypt'
 gem 'httparty'
+gem 'twilio-ruby'
 
 gem 'rake'
 
