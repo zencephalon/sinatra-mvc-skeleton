@@ -14,7 +14,7 @@ class Forecast < ActiveRecord::Base
 
   def response_temp(country,city)
 
-    response = HTTParty.get("http://api.wunderground.com/api/key/conditions/q/#{country}/#{city}.json")
+    response = HTTParty.get("http://api.wunderground.com/api/ENV['WU_API']/conditions/q/#{country}/#{city}.json")
 
     temp = response['current_observation']['temp_c']
 
