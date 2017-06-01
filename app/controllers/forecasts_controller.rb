@@ -31,7 +31,7 @@ auth_token = ''
 client = Twilio::REST::Client.new ENV['TWILIO_SID'], ENV['TWILIO_AUTH_TOKEN']
 client.account.messages.create({
   :from => ENV['WU_phone'],
-  :to => '4157564007',
+  :to => ,
   :body => "The weather in #{city} is #{@weather}. The temp is #{@temp}, wind: #{@wind}" ,
   # :media_url => 'https://climacons.herokuapp.com/clear.png'
 })
