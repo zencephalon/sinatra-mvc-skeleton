@@ -30,12 +30,18 @@ class Forecast < ActiveRecord::Base
     temp = response['current_observation']['wind_kph']
 
     temp
-
   end
 
 
+  def local_weather
 
+    response = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/conditions/q/autoip.json")
 
+    temp = response['current_observation']['wind_kph']
+
+    temp
+
+  end
 
 
 end
