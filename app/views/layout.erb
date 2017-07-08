@@ -22,12 +22,13 @@
 <body>
 <div id="content">
   <header>
-    <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
+  <!--   <a href="/"><img src="/img/zenchinese.png" class="logo"></a> -->
+  <a href="/"><h1 class="logo"><mark>we</mark>ather</h1></a>
 
-<div class='right'>
+<div class='right-menu'>
   <%if !session[:id]%>
-  <a href="/sessions/new">login</a> |
-  <a href="/users/new">register</a>
+  <a href="/sessions/new">Login</a> |
+  <a href="/users/new">Register</a>
   <%else%>
 
 <a href="/users/<%=current_user.id%>"><%=current_user.username%></a> |

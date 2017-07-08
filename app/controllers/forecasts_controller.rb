@@ -15,33 +15,31 @@ end
 
 post '/forecasts' do
   @forecast = Forecast.new(params[:forecast])
-  if @forecast
+  if @forecast.save
     country = @forecast.country.capitalize
     city = (@forecast.city).split.map(&:capitalize).join('_')
 
-   @weather = @forecast.response_weather(country, city)
-   @temp = @forecast.response_temp(country, city)
-   @wind = @forecast.response_wind(country, city)
+    @weather = @forecast.response_weather(country, city)
+    @temp = @forecast.response_temp(country, city)
+    @wind = @forecast.response_wind(country, city)
 
 
-account_sid = ''
-auth_token = ''
+    account_sid = ''
+    auth_token = ''
 
-# set up a client to talk to the Twilio REST API
-client = Twilio::REST::Client.new account_sid, auth_token
-client.account.messages.create({
-  :from => '',
-  :to => '',
-  :body => "The weather in #{city} is #{@weather}. The temp is #{@temp}, wind: #{@wind}" ,
-  # :media_url => 'https://climacons.herokuapp.com/clear.png'
-})
-
-
+    # set up a client to talk to the Twilio REST API
+    client = Twilio::REST::Client.new ENV['TWILIO_SID'], ENV['TWILIO_AUTH_TOKEN']
+    client.account.messages.create({
+    :from => ENV['WU_phone'],
+    :to => 4157564007,
+    :body => "The weather in #{city} is #{@weather}. The temp is #{@temp}, wind: #{@wind}" ,
+    # :media_url => 'https://climacons.herokuapp.com/clear.png'
+  })
 
     erb :"/index"
 
   else
-    @errors = @forecast.full_messages
+    @errors = @forecast.errors.full_messages
     erb :'/forecasts/new'
   end
 end
@@ -67,7 +65,7 @@ end
 #   if @forecast.save
 #     redirect "/"
 #   else
-#     @errors = @restaurant.errors.full_messages
+#     @errors = @forecast.errors.full_messages
 #     erb :'forecasts/edit'
 #   end
 # end

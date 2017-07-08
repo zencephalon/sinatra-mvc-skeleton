@@ -1,11 +1,12 @@
 
 class Forecast < ActiveRecord::Base
   belongs_to :user
+  validates :country, :city , presence:true
 
 
   def response_weather(country,city)
 
-    response = HTTParty.get("http://api.wunderground.com/api/key/conditions/q/#{country}/#{city}.json")
+    response = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/conditions/q/#{country}/#{city}.json")
 
     weather = response['current_observation']['weather']
    end
@@ -14,7 +15,7 @@ class Forecast < ActiveRecord::Base
 
   def response_temp(country,city)
 
-    response = HTTParty.get("http://api.wunderground.com/api/key/conditions/q/#{country}/#{city}.json")
+    response = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/conditions/q/#{country}/#{city}.json")
 
     temp = response['current_observation']['temp_c']
 
@@ -25,17 +26,23 @@ class Forecast < ActiveRecord::Base
 
   def response_wind(country,city)
 
-    response = HTTParty.get("http://api.wunderground.com/api/key/conditions/q/#{country}/#{city}.json")
+    response = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/conditions/q/#{country}/#{city}.json")
+
+    temp = response['current_observation']['wind_kph']
+
+    temp
+  end
+
+
+  def local_weather
+
+    response = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/conditions/q/autoip.json")
 
     temp = response['current_observation']['wind_kph']
 
     temp
 
   end
-
-
-
-
 
 
 end

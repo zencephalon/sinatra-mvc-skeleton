@@ -12,6 +12,7 @@ gem 'activerecord'
 gem 'bcrypt'
 gem 'httparty'
 gem 'twilio-ruby'
+gem 'dotenv'
 
 gem 'rake'
 
