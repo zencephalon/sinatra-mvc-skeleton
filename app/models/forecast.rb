@@ -1,6 +1,7 @@
 
 class Forecast < ActiveRecord::Base
   belongs_to :user
+  validates :country, :city , presence:true
 
 
   def response_weather(country,city)

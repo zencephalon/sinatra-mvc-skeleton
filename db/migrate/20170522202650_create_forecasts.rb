@@ -1,8 +1,8 @@
 class CreateForecasts < ActiveRecord::Migration
   def change
     create_table :forecasts do |t|
-      t.string :country
-      t.string :city
+      t.string :country, null: false
+      t.string :city, null: false
       # t.string :location
       # t.datetime :date
       # t.string :temperature

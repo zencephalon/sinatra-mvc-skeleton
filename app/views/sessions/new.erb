@@ -1,12 +1,10 @@
-
 <br>
-<br>
-<form action = "/sessions" method = "post">
+<form id='login-form' action = "/sessions" method = "post">
   <input type = "text" name = "username" placeholder="Username">
   <br>
   <input type = "password" name = "password" placeholder="Password">
   <br>
   <input type = "submit", value = "Login">
+<%= erb :'_errors' %>
 </form>
 
-<%= erb :'_errors' %>

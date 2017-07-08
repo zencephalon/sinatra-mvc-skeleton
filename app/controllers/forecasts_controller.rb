@@ -15,7 +15,7 @@ end
 
 post '/forecasts' do
   @forecast = Forecast.new(params[:forecast])
-  if @forecast
+  if @forecast.save
     country = @forecast.country.capitalize
     city = (@forecast.city).split.map(&:capitalize).join('_')
 
@@ -39,7 +39,7 @@ post '/forecasts' do
     erb :"/index"
 
   else
-    @errors = @forecast.full_messages
+    @errors = @forecast.errors.full_messages
     erb :'/forecasts/new'
   end
 end
