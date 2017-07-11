@@ -34,11 +34,35 @@ class Forecast < ActiveRecord::Base
   end
 
 
+    def humidity(country,city)
+
+    response = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/conditions/q/#{country}/#{city}.json")
+
+    humidity = response['current_observation']['relative_humidity']
+
+    humidity
+  end
+
+
+
+
+
+  def icon(country,city)
+
+    response = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/conditions/q/#{country}/#{city}.json")
+
+    icon = response['current_observation']['icon_url']
+
+    icon
+  end
+
+
+
   def local_weather
 
     response = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/conditions/q/autoip.json")
 
-    temp = response['current_observation']['wind_kph']
+    temp = response['current_observation']['icon_url']
 
     temp
 

@@ -19,22 +19,25 @@ post '/forecasts' do
     country = @forecast.country.capitalize
     city = (@forecast.city).split.map(&:capitalize).join('_')
 
+    @icon = @forecast.icon(country, city)
     @weather = @forecast.response_weather(country, city)
     @temp = @forecast.response_temp(country, city)
     @wind = @forecast.response_wind(country, city)
+    @humidity = @forecast.humidity(country, city)
+    # @local_weather = @forecast.local_weather
 
 
     account_sid = ''
     auth_token = ''
 
     # set up a client to talk to the Twilio REST API
-    client = Twilio::REST::Client.new ENV['TWILIO_SID'], ENV['TWILIO_AUTH_TOKEN']
-    client.account.messages.create({
-    :from => ENV['WU_phone'],
-    :to => 4157564007,
-    :body => "The weather in #{city} is #{@weather}. The temp is #{@temp}, wind: #{@wind}" ,
-    # :media_url => 'https://climacons.herokuapp.com/clear.png'
-  })
+  #   client = Twilio::REST::Client.new ENV['TWILIO_SID'], ENV['TWILIO_AUTH_TOKEN']
+  #   client.account.messages.create({
+  #   :from => ENV['WU_phone'],
+  #   :to => 4157564007,
+  #   :body => "The weather in #{city} is #{@weather}. The temp is #{@temp}, wind: #{@wind}" ,
+  #   # :media_url => 'https://climacons.herokuapp.com/clear.png'
+  # })
 
     erb :"/index"
 
