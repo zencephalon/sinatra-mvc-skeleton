@@ -1,7 +1,27 @@
-$(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+$(document).ready(function(){
+   startTime()
 });
+
+function startTime() {
+    var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+    var today = new Date();
+    var month = monthNames[today.getMonth()]
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('date').innerHTML =
+    month + " " + today.getDate() + " " + today.getFullYear();
+    document.getElementById('clock').innerHTML =
+    h + ":" + m + ":" + s;
+
+    var t = setTimeout(startTime, 1000);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+
+

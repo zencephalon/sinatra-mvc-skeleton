@@ -5,6 +5,7 @@
   text-decoration: none;
   font-size: 1.2em;
 
+
 }
 
 a:link {
@@ -105,5 +106,31 @@ mark {
 .forecast{
   margin-top: 4em;
   margin-left: 3.5em;
+}
+
+#clock{
+  display: inline-block;
+  text-align: center;
+  position: fixed; /* or absolute */
+  top: 45%;
+  left: 43%;
+  color: white;
+/*  background-color: white;*/
+  opacity: 0.70;
+  font-size: 4em;
+  border-radius: 0.2em;
+}
+
+#date{
+    display: inline-block;
+  text-align: center;
+  position: fixed; /* or absolute */
+  top: 53%;
+  left: 45.5%;
+  color: white;
+
+  opacity: 0.70;
+  font-size: 2em;
+  border-radius: 0.2em;
 }
 

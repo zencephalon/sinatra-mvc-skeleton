@@ -14,7 +14,7 @@
   <!-- Load Vollkorn font -->
   <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
   <title></title>
@@ -31,7 +31,7 @@
   <a href="/users/new">Register</a>
   <%else%>
 
-<a href="/users/<%=current_user.id%>"><%=current_user.username%></a> |
+<a href="/users/<%=current_user.id%>">Hello <%=current_user.username%></a> |
   <form method = "post" action = "/sessions/<%=session[:id]%>">
     <input type= "hidden" name = "_method" value="delete">
     <button type = "submit"> Log out </button>
@@ -40,9 +40,15 @@
   <%end%>
 </div>
 
-
   </header>
   <%= yield %>
 </div>
 </body>
+
+
+<div id='date'>
+</div>
+<div id='clock'>
+</div>
+
 </html>

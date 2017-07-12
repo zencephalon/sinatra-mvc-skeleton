@@ -24,6 +24,8 @@ post '/forecasts' do
     @temp = @forecast.response_temp(country, city)
     @wind = @forecast.response_wind(country, city)
     @humidity = @forecast.humidity(country, city)
+    @futureweather = @forecast.fore(country, city)
+ 
     # @local_weather = @forecast.local_weather
 
 

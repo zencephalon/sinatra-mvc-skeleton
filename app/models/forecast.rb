@@ -57,6 +57,16 @@ class Forecast < ActiveRecord::Base
   end
 
 
+  def fore(country,city)
+
+    response = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/conditions/q/#{country}/#{city}.json")
+
+    result = response['forecast']
+
+    p result
+  end
+
+
 
   def local_weather
 
