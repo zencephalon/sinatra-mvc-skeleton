@@ -45,8 +45,6 @@ class Forecast < ActiveRecord::Base
 
 
 
-
-
   def icon(country,city)
 
     response = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/conditions/q/#{country}/#{city}.json")
@@ -62,8 +60,9 @@ class Forecast < ActiveRecord::Base
     response = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/conditions/q/#{country}/#{city}.json")
 
     result = response['forecast']
-
-    p result
+    p'@' * 50
+    p response
+    p'#' * 50
   end
 
 
