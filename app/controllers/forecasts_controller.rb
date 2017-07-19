@@ -16,15 +16,22 @@ end
 post '/forecasts' do
   @forecast = Forecast.new(params[:forecast])
   if @forecast.save
-    country = @forecast.country.capitalize
+    country = (@forecast.country).split.map(&:capitalize).join('_')
     city = (@forecast.city).split.map(&:capitalize).join('_')
 
-    @icon = @forecast.icon(country, city)
-    @weather = @forecast.response_weather(country, city)
-    @temp = @forecast.response_temp(country, city)
-    @wind = @forecast.response_wind(country, city)
-    @humidity = @forecast.humidity(country, city)
-    @futureweather = @forecast.fore(country, city)
+    @city = (@forecast.city).split.map(&:capitalize).join(' ')
+    @country = (@forecast.country).split.map(&:capitalize).join(' ')
+
+    p weather_json = @forecast.response_weather(country, city)
+
+    @weather = weather_json['current_observation']['weather']
+    @icon = weather_json['current_observation']['icon_url']
+    @temp = weather_json['current_observation']['temp_c']
+    @temp_f = weather_json['current_observation']['temp_f']
+    @wind = weather_json['current_observation']['wind_kph']
+    @wind_miles = weather_json['current_observation']['wind_mph']
+    @humidity = weather_json['current_observation']['relative_humidity']
+    
  
     # @local_weather = @forecast.local_weather
 

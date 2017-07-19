@@ -1,17 +1,17 @@
 <a class="get-forecast" href="/forecasts/new">get weather</a>
 
 <%if @forecast%>
-<div class="forecast">
-<h2>Weather for <%=@forecast.city.capitalize%>, <%=@forecast.country.capitalize%></h2>
-
-<img src=<%=@icon%>>
-<p><%=@weather%></p>
-<p> Temperature: <%=@temp%> ℃</p>
-<p> Wind: <%=@temp%> km/h</p>
-<p> Humidity: <%=@humidity%></p>
-<p> Forecast: <%=@futureweather%></p>
-<!-- <img src=<%=@local_weather%>> -->
-</div>
-
+	<div class="forecast">
+		<h2><%=@city%>, <%=@country%></h2>
+		<div class='icon'>
+			<img src=<%=@icon%>>
+			<p><%=@weather%></p>
+			<p> Temperature: <%=@temp%> ℃</p>
+			<%=@temp_f%> F 
+			<p> Wind: <%=@wind%> km/h</p>
+			<%=@wind_miles%> mph
+			<p> Humidity: <%=@humidity%></p>
+		</div>
+	</div>
 <%end%>
 

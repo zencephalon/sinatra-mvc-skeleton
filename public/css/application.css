@@ -122,15 +122,24 @@ mark {
 }
 
 #date{
-    display: inline-block;
+  display: inline-block;
   text-align: center;
   position: fixed; /* or absolute */
   top: 53%;
   left: 45.5%;
   color: white;
-
   opacity: 0.70;
   font-size: 2em;
   border-radius: 0.2em;
 }
 
+.icon {
+  background-color: white;
+  display: inline-block;
+  opacity: 0.5;
+  border-radius: 0.5em;
+  padding: 0.7em;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px 2px black;
+
+}
