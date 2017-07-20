@@ -99,14 +99,11 @@ mark {
 }
 
 .get-forecast{
+  display: block;
   margin-left: 2em;
   font-size: 1.8em;
 }
 
-.forecast{
-  margin-top: 4em;
-  margin-left: 3.5em;
-}
 
 #clock{
   display: inline-block;
@@ -133,6 +130,12 @@ mark {
   border-radius: 0.2em;
 }
 
+.forecast{
+  display: inline-block;
+  margin-top: 4em;
+  margin-left: 2em;
+}
+
 .icon {
   background-color: white;
   display: inline-block;
@@ -140,6 +143,7 @@ mark {
   border-radius: 0.5em;
   padding: 0.7em;
   border: 1px solid black;
-  box-shadow: 2px 2px 2px 2px black;
+  box-shadow: 10px 10px 5px black;
+
 
 }
