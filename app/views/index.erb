@@ -13,5 +13,73 @@
 			<p> Humidity: <%=@humidity%></p>
 		</div>
 	</div>
+
+
+
+	<div class="forecast">
+		<h3><%=@forecast_next_weekday%> <%=@forecast_next_weekday_month%>.<%=@forecast_next_weekday_day%>.<%=@forecast_next_weekday_year%></h3>
+		<div class='icon'>
+			<img src=<%=@forecast_next_weekday_icon%>>
+			<p><%=@forecast_next_weekday_conditions%></p>
+			<p> Temperature: <%=@forecast_next_weekday_temp_celsius%> ℃</p>
+			<%=@forecast_next_weekday_temp_fahrenheit%> F 
+			<p> Wind: <%=@forecast_next_weekday_wind_kph%> km/h</p>
+			<%=@forecast_next_weekday_wind_mph%> mph
+			<p> Humidity: <%=@forecast_next_weekday_humidity%></p>
+		</div>
+	</div>
+
+
+
+	<div class="forecast">
+		<h3><%=@forecast2%> <%=@forecast2_month%>.<%=@forecast2_day%>.<%=@forecast2_year%></h3>
+		<div class='icon'>
+			<img src=<%=@forecast2_icon%>>
+			<p><%=@forecast2_conditions%></p>
+			<p> Temperature: <%=@forecast2_temp_celsius%> ℃</p>
+			<%=@forecast2_temp_fahrenheit%> F 
+			<p> Wind: <%=@forecast2_wind_kph%> km/h</p>
+			<%=@forecast2_wind_mph%> mph
+			<p> Humidity: <%=@forecast2_humidity%></p>
+		</div>
+	</div>
+
+
+
+		<div class="forecast">
+		<h2><%=@city%>, <%=@country%></h2>
+
+		<div class='icon'>
+			<img src=<%=@icon%>>
+			<p><%=@weather%></p>
+			<p> Temperature: <%=@temp%> ℃</p>
+			<%=@temp_f%> F 
+			<p> Wind: <%=@wind%> km/h</p>
+			<%=@wind_miles%> mph
+			<p> Humidity: <%=@humidity%></p>
+		</div>
+	</div>
+
+		<div class="forecast">
+		<h2><%=@city%>, <%=@country%></h2>
+
+		<div class='icon'>
+			<img src=<%=@icon%>>
+			<p><%=@weather%></p>
+			<p> Temperature: <%=@temp%> ℃</p>
+			<%=@temp_f%> F 
+			<p> Wind: <%=@wind%> km/h</p>
+			<%=@wind_miles%> mph
+			<p> Humidity: <%=@humidity%></p>
+		</div>
+	</div>
+
+
+	
+
+
+
+
+
 <%end%>
 
