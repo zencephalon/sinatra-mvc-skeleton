@@ -1,7 +1,6 @@
 <%if @forecast%>
- 
-  <h2><mark id='location'><%=@city%>, <%=@country%></mark></h2>
-  
+
+<h2><mark id='location'><%=@city%>, <%=@country%></mark></h2>
 
 <div id='forecast-container'>
   <div class="forecast">
@@ -15,7 +14,7 @@
       <%=@wind_miles%> mph
       <p> Humidity: <%=@humidity%></p>
     </div>
-  </div>
+  </div> 
 
 
   <div class="forecast">
@@ -86,9 +85,83 @@
       <p> Humidity: <%=@forecast4_humidity%></p>
     </div>
   </div>
+
+
+  <div class="forecast">
+    <h3><%=@forecast5%> <%=@forecast5_month%>.<%=@forecast5_day%>.<%=@forecast5_year%></h3>
+    <div class='icon'>
+      <img src=<%=@forecast5_icon%>>
+      <p><%=@forecast5_conditions%></p>
+      <p> Temperature: <%=@forecast5_temp_celsius%> ℃</p>
+      <%=@forecast5_temp_fahrenheit%> F 
+      <p> Wind: <%=@forecast5_wind_kph%> km/h</p>
+      <%=@forecast5_wind_mph%> mph
+      <p> Humidity: <%=@forecast5_humidity%></p>
+    </div>
+  </div>
+
+
+    <div class="forecast">
+    <h3><%=@forecast6%> <%=@forecast6_month%>.<%=@forecast6_day%>.<%=@forecast6_year%></h3>
+    <div class='icon'>
+      <img src=<%=@forecast6_icon%>>
+      <p><%=@forecast6_conditions%></p>
+      <p> Temperature: <%=@forecast6_temp_celsius%> ℃</p>
+      <%=@forecast6_temp_fahrenheit%> F 
+      <p> Wind: <%=@forecast6_wind_kph%> km/h</p>
+      <%=@forecast6_wind_mph%> mph
+      <p> Humidity: <%=@forecast6_humidity%></p>
+    </div>
+  </div>
+
+
+    <div class="forecast">
+    <h3><%=@forecast7%> <%=@forecast7_month%>.<%=@forecast7_day%>.<%=@forecast7_year%></h3>
+    <div class='icon'>
+      <img src=<%=@forecast7_icon%>>
+      <p><%=@forecast7_conditions%></p>
+      <p> Temperature: <%=@forecast7_temp_celsius%> ℃</p>
+      <%=@forecast7_temp_fahrenheit%> F 
+      <p> Wind: <%=@forecast7_wind_kph%> km/h</p>
+      <%=@forecast7_wind_mph%> mph
+      <p> Humidity: <%=@forecast7_humidity%></p>
+    </div>
+  </div>
+
+
+    <div class="forecast">
+    <h3><%=@forecast8%> <%=@forecast8_month%>.<%=@forecast8_day%>.<%=@forecast8_year%></h3>
+    <div class='icon'>
+      <img src=<%=@forecast8_icon%>>
+      <p><%=@forecast8_conditions%></p>
+      <p> Temperature: <%=@forecast8_temp_celsius%> ℃</p>
+      <%=@forecast8_temp_fahrenheit%> F 
+      <p> Wind: <%=@forecast8_wind_kph%> km/h</p>
+      <%=@forecast8_wind_mph%> mph
+      <p> Humidity: <%=@forecast8_humidity%></p>
+    </div>
+  </div>
+
+
+    <div class="forecast">
+    <h3><%=@forecast9%> <%=@forecast9_month%>.<%=@forecast9_day%>.<%=@forecast9_year%></h3>
+    <div class='icon'>
+      <img src=<%=@forecast9_icon%>>
+      <p><%=@forecast9_conditions%></p>
+      <p> Temperature: <%=@forecast9_temp_celsius%> ℃</p>
+      <%=@forecast9_temp_fahrenheit%> F 
+      <p> Wind: <%=@forecast9_wind_kph%> km/h</p>
+      <%=@forecast9_wind_mph%> mph
+      <p> Humidity: <%=@forecast9_humidity%></p>
+    </div>
+  </div>
+
+
 </div>
 
-<a href="/forecasts/<%=@forecast.id%>/10day"><mark><h2 id='tendaylink'><mark>10-Day Weather Forecast</mark></h2></a>
+
+
+<a href="/forecasts/<%=@forecast.id%>"><mark><h2 id='tendaylink'><mark>5-Day Weather Forecast</mark></h2></a>
 
 
 <%end%>

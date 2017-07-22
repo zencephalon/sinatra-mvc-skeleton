@@ -44,13 +44,11 @@ input{
     margin: 10px 0;
     box-sizing: border-box;
     border: 1px solid #ccc;
-
-
-border-radius: 3em 1em 5em / 0.5em 2em;
-margin-left: 1em;
-
+    border-radius: 3em 1em 5em / 0.5em 2em;
+    margin-left: 1em;
     outline: none;
 }
+
 
 input:focus {
     border: 1px solid black;
@@ -90,7 +88,7 @@ background-image: url("https://unsplash.it/1600/1000/?image=699");
   color: #f3f2f2;
 }
 
-mark {
+.marklogo {
   background-color: green;
   opacity: 0.50;
   border-radius: 0.2em;
@@ -133,7 +131,8 @@ mark {
 .forecast{
   display: inline-block;
   margin-top: 1em;
-  margin-left: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .icon {
@@ -147,10 +146,22 @@ mark {
 }
 
 #location{
-  margin-left: 2em;
+  margin-left: 3.5%;
   text-align: center;
+  border-top:0.5px solid black;
+  border-bottom:0.5px solid black;
+  border-radius: 0.2em;
+  opacity: 0.60;
+  background-color: green;
+  color: #9cbab8;
+
 }
 
 #forecast-container{
   text-align: center;
+}
+
+#tendaylink{ 
+  text-align: center;
+ 
 }
