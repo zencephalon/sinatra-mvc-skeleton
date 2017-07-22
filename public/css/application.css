@@ -108,7 +108,7 @@ mark {
 #clock{
   display: inline-block;
   text-align: center;
-  position: fixed; /* or absolute */
+  position: absolute;
   top: 45%;
   left: 43%;
   color: white;
@@ -121,7 +121,7 @@ mark {
 #date{
   display: inline-block;
   text-align: center;
-  position: fixed; /* or absolute */
+  position: absolute;
   top: 53%;
   left: 45.5%;
   color: white;
@@ -132,7 +132,7 @@ mark {
 
 .forecast{
   display: inline-block;
-  margin-top: 4em;
+  margin-top: 1em;
   margin-left: 2em;
 }
 
@@ -144,6 +144,13 @@ mark {
   padding: 0.7em;
   border: 1px solid black;
   box-shadow: 10px 10px 5px black;
+}
 
+#location{
+  margin-left: 2em;
+  text-align: center;
+}
 
+#forecast-container{
+  text-align: center;
 }
