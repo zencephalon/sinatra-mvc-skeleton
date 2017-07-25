@@ -4,8 +4,6 @@
   margin-top: 5%;
   text-decoration: none;
   font-size: 1.2em;
-
-
 }
 
 a:link {
@@ -128,17 +126,10 @@ background-image: url("https://unsplash.it/1600/1000/?image=699");
   border-radius: 0.2em;
 }
 
-.forecast{
-  display: inline-block;
-  margin-top: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
 .icon {
   background-color: white;
   display: inline-block;
-  opacity: 0.5;
+  opacity: 0.60;
   border-radius: 0.5em;
   padding: 0.7em;
   border: 1px solid black;
@@ -148,20 +139,38 @@ background-image: url("https://unsplash.it/1600/1000/?image=699");
 #location{
   margin-left: 3.5%;
   text-align: center;
-  border-top:0.5px solid black;
-  border-bottom:0.5px solid black;
   border-radius: 0.2em;
   opacity: 0.60;
   background-color: green;
   color: #9cbab8;
-
+  padding: 0.2em;
 }
 
 #forecast-container{
   text-align: center;
+  padding: 1em;
+  padding-top: 0em;
+  margin-top: 0em;
+ /* background-color: black;
+  margin-left: 3em;
+  margin-right: 3em;
+  border-radius: 0.9em;
+  opacity: 0.50;*/
+
+}
+
+.forecast{
+  display: inline-block;
+  margin-left: 1em;
+  margin-right: 1em;
+             
 }
 
 #tendaylink{ 
-  text-align: center;
- 
+  margin-left: 3.5%;
+  text-align: left;
+  border-radius: 0.2em;
+  padding: 0.2em;
+  border: 1px solid black;
+  opacity: 0.6;
 }
