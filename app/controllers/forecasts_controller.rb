@@ -131,8 +131,6 @@ get '/forecasts/:id' do
   #   # :media_url => 'https://climacons.herokuapp.com/clear.png'
   # })
 
-
-
   erb :'forecasts/show'
 end
 
