@@ -178,6 +178,7 @@ body {
   opacity: 0.75;
   background-color: green;
   box-shadow: 6px 6px 1px black;
+  border:1px solid black;
 }
 
 #tendaylink:hover {
