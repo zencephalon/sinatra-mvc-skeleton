@@ -138,7 +138,7 @@ body {
 }
 
 #location {
-  margin-left: 3.5%;
+  margin-left: 4%;
   text-align: center;
   border-radius: 0.2em;
   opacity: 0.60;
@@ -170,7 +170,7 @@ body {
 }
 
 #tendaylink { 
-  margin-left: 3.5%;
+  margin-left: 4%;
   text-align: left;
   border-radius: 0.2em;
   padding: 0.2em;
@@ -178,6 +178,7 @@ body {
   opacity: 0.75;
   background-color: green;
   box-shadow: 6px 6px 1px black;
+  border:1px solid black;
 }
 
 #tendaylink:hover {
