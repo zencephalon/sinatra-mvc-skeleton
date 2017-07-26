@@ -2,11 +2,15 @@
     <input type = "text" name = "user[username]" value="<%=@user.username %>" placeholder="enter username"><br>
     <input type = "email" name = "user[email]" value="<%=@user.email %>" placeholder="enter email"><br>
     <input type="phone-number" name="user[phone_number]" value="<%=@user.phone_number %>" placeholder="phone number"><br>
-    <input type="city" name="user[city]" value="<%=@user.city %>" placeholder="city"><br>
     <input type = "password" name = "user[password]" placeholder="enter password"><br>
     <input type = "submit", value = "Register User">
 
 		<%= erb :'_errors' %>
 		
 </form>
+
+<div id='date'>
+</div>
+<div id='clock'>
+</div>
 
