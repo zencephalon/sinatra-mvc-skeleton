@@ -27,14 +27,20 @@ end
 
 get '/forecasts/:id' do
   @forecast = Forecast.find(params[:id])
+
+  
     country = (@forecast.country).split.map(&:capitalize).join('_')
     city = (@forecast.city).split.map(&:capitalize).join('_')
-    @city = (@forecast.city).split.map(&:capitalize).join(' ')
-    @country = (@forecast.country).split.map(&:capitalize).join(' ')
+    # @city = (@forecast.city).split.map(&:capitalize).join(' ')
+    # @country = (@forecast.country).split.map(&:capitalize).join(' ')
 
     @weather_json = @forecast.response_weather(country, city)
     @weather10day_jason = @forecast.forecast_10_day(country, city)
 
+    p '*' * 40
+    p @weather_json
+  
+    if @weather_json['response']['error'] == nil && @weather_json['current_observation'] != nil && @weather_json['current_observation']['display_location'] != nil
 
     # @weather = weather_json['current_observation']['weather']
     # @icon = weather_json['current_observation']['icon_url']
@@ -133,20 +139,28 @@ get '/forecasts/:id' do
   # })
 
   erb :'forecasts/show'
+
+else
+  @errors = []
+  @errors << 'Invalid city, country or state!'
+  erb :'/forecasts/new'
+end
+
 end
 
 
 
 get '/forecasts/:id/10day' do
   @forecast = Forecast.find(params[:id])
+    
     country = (@forecast.country).split.map(&:capitalize).join('_')
     city = (@forecast.city).split.map(&:capitalize).join('_')
-    @city = (@forecast.city).split.map(&:capitalize).join(' ')
-    @country = (@forecast.country).split.map(&:capitalize).join(' ')
-
+    # @city = (@forecast.city).split.map(&:capitalize).join(' ')
+    # @country = (@forecast.country).split.map(&:capitalize).join(' ')
 
     @weather_json = @forecast.response_weather(country, city)
     @weather10day_jason = @forecast.forecast_10_day(country, city)
+
 
     # weather_json = @forecast.response_weather(country, city)
     # weather10day_jason = @forecast.forecast_10_day(country, city)
