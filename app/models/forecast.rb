@@ -16,4 +16,8 @@ class Forecast < ActiveRecord::Base
     hourly = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/hourly/q/#{country}/#{city}.json")
   end
 
+  def hourly10day(country, city)
+    hourly = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/hourly10day/q/#{country}/#{city}.json")
+  end
+
 end
