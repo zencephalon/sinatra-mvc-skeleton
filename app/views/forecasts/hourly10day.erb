@@ -23,11 +23,11 @@
   </div>
   <%end%>
 </div>
+<div class="menu"
+   <a href="/forecasts/<%=@forecast.id%>"><h3><mark id='tendaylink'>5 Day Forecast</mark></h3></a>
 
-<a href="/forecasts/<%=@forecast.id%>"><h3><mark id='tendaylink'>5-Day Weather</mark></h3></a>
+  <a href="/forecasts/<%=@forecast.id%>/10day"><h3><mark id='tendaylink'>10 Day Weather</mark></h3></a>
 
-<a href="/forecasts/<%=@forecast.id%>/10day"><h3><mark id='tendaylink'>10-Day Weather</mark></h3></a>
-
-<a href="/forecasts/<%=@forecast.id%>/hourly"><h3><mark id='tendaylink'>Hourly Forecast</mark></h3></a>
-
+  <a href="/forecasts/<%=@forecast.id%>/hourly"><h3><mark id='tendaylink'>Hourly Forecast</mark></h3></a>
+</div>
 <%end%>
