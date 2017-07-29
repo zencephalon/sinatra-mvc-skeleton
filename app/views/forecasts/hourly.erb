@@ -1,5 +1,7 @@
 <%if @forecast%>
 
+<a class="changelocation" href="/forecasts/new">change location</a>
+
 <h2><mark id='location'><%=@weather_json['current_observation']['display_location']['full']%></mark></h2>
 
 <div id='forecast-container'>

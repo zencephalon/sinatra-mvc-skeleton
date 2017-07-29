@@ -1,5 +1,7 @@
 <%if @forecast%>
 
+<a class="changelocation" href="/forecasts/new">change location</a>
+
 <h2><mark id='location'><%=@weather_json['current_observation']['display_location']['full']%></mark></h2>
 
 <div id='forecast-container'>
@@ -23,8 +25,9 @@
   </div>
   <%end%>
 </div>
-<div class="menu"
-   <a href="/forecasts/<%=@forecast.id%>"><h3><mark id='tendaylink'>5 Day Forecast</mark></h3></a>
+
+<div class="menu">
+  <a href="/forecasts/<%=@forecast.id%>"><h3><mark id='tendaylink'>5 Day Weather</mark></h3></a>
 
   <a href="/forecasts/<%=@forecast.id%>/10day"><h3><mark id='tendaylink'>10 Day Weather</mark></h3></a>
 
