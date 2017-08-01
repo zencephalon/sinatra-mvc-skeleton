@@ -41,9 +41,9 @@
 <div class="menu">
   <a href="/forecasts/<%=@forecast.id%>"><h3><mark id='tendaylink'>5 Day Forecast</mark></h3></a>
 
-  <a href="/forecasts/<%=@forecast.id%>/hourly"><h3><mark id='tendaylink'>Hourly Forecast</mark></h3></a>
+  <a href="/forecasts/<%=@forecast.id%>/hourly/<%=@weather_json['current_observation']['display_location']['full']%>"><h3><mark id='tendaylink'>Hourly Forecast</mark></h3></a>
 
-  <a href="/forecasts/<%=@forecast.id%>/hourly10day"><h3><mark id='tendaylink'>Hourly 10 day Forecast</mark></h3></a>
+  <a href="/forecasts/<%=@forecast.id%>/hourly10day/<%=@weather_json['current_observation']['display_location']['full']%>"><h3><mark id='tendaylink'>Hourly 10 day Forecast</mark></h3></a>
 </div>
 
 <%end%>

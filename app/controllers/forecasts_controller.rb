@@ -90,14 +90,15 @@ end
 
 
 
-get '/forecasts/:id/hourly' do
+get '/forecasts/:id/hourly/:location' do
 
   @forecast = Forecast.find(params[:id])
-    
+  @location = params[:location]  
+
   country = (@forecast.country).split.map(&:capitalize).join('_')
   city = (@forecast.city).split.map(&:capitalize).join('_')
 
-  @weather_json = @forecast.response_weather(country, city)
+  #@weather_json = @forecast.response_weather(country, city)
   @weather_hourly = @forecast.hourly(country, city)
 
   # p @weekday = @weather_hourly['hourly_forecast'][0]['FCTTIME']['weekday_name']
@@ -118,17 +119,18 @@ get '/forecasts/:id/hourly' do
 end
 
 
-get '/forecasts/:id/hourly10day' do
+get '/forecasts/:id/hourly10day/:location' do
   @forecast = Forecast.find(params[:id])
+  @location = params[:location]
+  
 
   country = (@forecast.country).split.map(&:capitalize).join('_')
   city = (@forecast.city).split.map(&:capitalize).join('_')
   
-  @weather_json = @forecast.response_weather(country, city)
-p @weather_hourly = @forecast.hourly10day(country, city)
+  #@weather_json = @forecast.response_weather(country, city)
+  @weather_hourly = @forecast.hourly10day(country, city)
 
-erb :'forecasts/hourly10day'
-
+  erb :'forecasts/hourly10day'
 end
 
 

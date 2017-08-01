@@ -2,7 +2,7 @@
 
 <a class="changelocation" href="/forecasts/new">change location</a>
 
-<h2><mark id='location'><%=@weather_json['current_observation']['display_location']['full']%></mark></h2>
+<h2><mark id='location'><%=@location%></mark></h2>
 
 <div id='forecast-container'>
 
@@ -31,6 +31,6 @@
 
   <a href="/forecasts/<%=@forecast.id%>/10day"><h3><mark id='tendaylink'>10 Day Weather</mark></h3></a>
 
-  <a href="/forecasts/<%=@forecast.id%>/hourly"><h3><mark id='tendaylink'>Hourly Forecast</mark></h3></a>
+  <a href="/forecasts/<%=@forecast.id%>/hourly/<%=@location%>"><h3><mark id='tendaylink'>Hourly Forecast</mark></h3></a>
 </div>
 <%end%>
