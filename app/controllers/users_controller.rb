@@ -18,6 +18,14 @@ post '/users' do
   @user = User.new(params[:user])
   if @user.save
     session[:id] = @user.id
+
+  client = Twilio::REST::Client.new ENV['TWILIO_SID'], ENV['TWILIO_AUTH_TOKEN']
+  client.account.messages.create({
+  :from => ENV['WU_phone'],
+  :to => @user.phone_number,
+  :body => "Hi #{@user.username}.Thank you for signing up with 'Weather'. Text any city followed by comma, then country or state to get a forecast!"
+  })
+   
     redirect "/users/#{@user.id}"
   else
     @errors = @user.errors.full_messages
@@ -25,10 +33,11 @@ post '/users' do
   end
 end
 
+
 #user show
 get '/users/:id' do
   @user = User.find(params[:id])
-    erb :'users/show'
+  erb :'users/show'
 end
 
 

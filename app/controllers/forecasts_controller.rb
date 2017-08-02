@@ -134,10 +134,6 @@ get '/forecasts/:id/hourly10day/:location' do
 end
 
 
-
-
-
-
 # #Edit
 # get '/forecasts/:id/edit' do
 #   @forecast = Forecast.find(params[:id])
