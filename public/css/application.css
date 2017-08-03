@@ -73,8 +73,9 @@ body {
 }
 
 #forecast-form {
-  margin-top: 8em;
-  margin-left: 3em;
+ margin-left: 3em;
+ margin-top: 10em;
+
 }
 
 .logo {
@@ -116,7 +117,9 @@ body {
 }
 
 .changelocation:hover{
-  color: red;
+  color: black;
+  background-color: white;
+  opacity: 0.5; 
 }
 
 #clock {
@@ -236,4 +239,23 @@ body {
 .button5:hover {
     background-color: white;
     color: black;
+}
+
+#registertext{
+  text-align: center;
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 0.4em;
+  box-shadow: 3px 3px 10px black;
+  width: 70%;
+  min-height: 100%;
+  max-width: 40%;
+  margin: 0 auto;
+  padding: 1em 1em;
+
+  color: black;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px grey;
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  
 }

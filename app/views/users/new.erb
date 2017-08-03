@@ -1,3 +1,7 @@
+<a class="get-forecast" href="/forecasts/new">get weather</a>
+
+<h2 id='registertext'>Register to be able to check weather via sms!</h2>
+
 <form id='register-form' method = "post" action = "/users">
     <input type = "text" name = "user[username]" value="<%=@user.username %>" placeholder="enter username"><br>
     <input type = "email" name = "user[email]" value="<%=@user.email %>" placeholder="enter email"><br>
@@ -13,4 +17,6 @@
 </div>
 <div id='clock'>
 </div>
+
+
 
