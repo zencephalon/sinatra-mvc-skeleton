@@ -1,9 +1,9 @@
 #index get all users info
-get '/users' do
-  @users = User.all
-  @users.map{|user| user.email.to_s}
-  erb :'users/index'
-end
+# get '/users' do
+#   @users = User.all
+#   @users.map{|user| user.email.to_s}
+#   erb :'users/index'
+# end
 
 
 #new
@@ -68,7 +68,7 @@ end
 delete '/users/:id' do
   User.find(params[:id]).destroy!
   session[:id] = nil
-  redirect '/users'
+  redirect '/'
 end
 
 

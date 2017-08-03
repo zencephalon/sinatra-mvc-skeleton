@@ -35,7 +35,7 @@
 <a href="/users/<%=current_user.id%>">Hello <%=current_user.username%></a> |
   <form method = "post" action = "/sessions/<%=session[:id]%>">
     <input type= "hidden" name = "_method" value="delete">
-    <button type = "submit"> Log out </button>
+    <button class="button5 type = "submit"> Log out </button>
   </form>
 <!--  <a href="/sessions/<%=session[:id]%>">logout</a> -->
   <%end%>

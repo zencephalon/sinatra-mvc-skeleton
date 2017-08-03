@@ -10,19 +10,23 @@ post '/inbound' do
   body = params["Body"]
   array = body.split(',')
 
-  city = array[0].split.map(&:capitalize).join('_')
-  p country = array[1].split.map(&:capitalize).join('_')
-  forecast = cast(country, city)
-
   person = User.find_by(phone_number: incoming_number[2..-1])
 
-  content_type 'text/xml'
+  if person != nil
 
-  "<Response>
-  <Message>
-  Hello #{person.username}!
-  The weather in #{array[0]} is:
-  #{forecast}
-  </Message>
-  </Response>"
+    city = array[0].split.map(&:capitalize).join('_')
+    country = array[1].split.map(&:capitalize).join('_')
+
+    forecast = cast(country, city)
+    
+    content_type 'text/xml'
+
+    "<Response>
+    <Message>
+    Hello #{person.username}!
+    The weather in #{array[0]} is:
+    #{forecast}
+    </Message>
+    </Response>"
+  end
 end

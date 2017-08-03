@@ -1,17 +1,26 @@
+<a class="get-forecast" href="/forecasts/new">get weather</a>
+<div class='userprofile'
+	<h1>Hello <%= @user.username%> </h1>
+	<h2>You signed up with email: <%= @user.email%> </h2>
+	<h2>Phone number: <%= @user.phone_number%> </h2>
+	<!-- <a href="/users/<%=@user.id %>/edit">Edit profile</a><br> -->
+	<a href="/users/<%=@user.id %>/edit"><button class="button5">Edit profile</button></a>
+	<br>
+	<br>
 
-<h1>users show</h1>
+<!-- 	<form method="post" action="/users/<%=@user.id %>">
+	<input name="_method" type="hidden" value="delete" />
+	<input name="commit" type="submit" value="Delete profile"/>
+	</form> -->
 
-<h1><%= @user.username%> </h1>
-<h1><%= @user.email%> </h1>
+  <form method = "post" action = "/users/<%=@user.id %>">
+    <input type= "hidden" name = "_method" value="delete">
+    <button class="button5 type = "submit"> Delete user </button>
+  </form>
 
-<a href="/users/<%=@user.id %>/edit">Edit</a>
+</div>
 
-<form method="post" action="/users/<%=@user.id %>">
-  <input name="_method" type="hidden" value="delete" />
-  <input name="commit" type="submit" value="Delete"/>
-</form>
 
-<a href='/users'>show all users</a>
 
 
 

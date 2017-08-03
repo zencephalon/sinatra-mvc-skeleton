@@ -55,7 +55,7 @@ input:focus {
 
 body {
   height: 100%;
-  background-image: url("https://unsplash.it/1600/1000/?image=695");
+  background-image: url("https://unsplash.it/1600/1000/?image=699");
 /*  background-image: url("https://unsplash.it/1600/1000/?image=695");
 */  background-attachment: fixed;
   background-repeat: no-repeat;
@@ -85,7 +85,7 @@ body {
   margin: 0.7em auto 0 0.7em;
   font-size:4em;
   color: #f3f2f2;
-
+  
 }
 
 .marklogo {
@@ -188,7 +188,6 @@ body {
   text-align: center;
   border-radius: 0.2em;
   padding: 0.2em;
-
   opacity: 0.85;
   background-color: green;
   box-shadow: 6px 6px 1px black;
@@ -197,13 +196,44 @@ body {
 
 #tendaylink:hover {
   background-color: green;
-  text-decoration: none;    opacity: 0.95;
+  text-decoration: none; 
+  opacity: 0.95;
   box-shadow: 3px 3px 2px black;
   border:1px solid black;   
   }
 
 .menu{
   text-align: center;
-
 }
 
+.userprofile{
+  text-align: center;
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 0.6em;
+  box-shadow: 3px 3px 10px black;
+  width: 100%;
+  min-height: 100%;
+  max-width: 40%;
+  margin: 0 auto;
+  padding: 1em 1em;
+  margin-top: 3em;
+  margin-left: 3em;
+
+}
+#editheadline{
+  margin-left: 2em;
+}
+#edit-form {
+  margin-top: 2em;
+  margin-left: 3em;
+}
+.button5{
+    background-color: #555555;
+    color: white;
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
+.button5:hover {
+    background-color: white;
+    color: black;
+}
