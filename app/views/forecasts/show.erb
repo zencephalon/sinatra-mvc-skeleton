@@ -30,7 +30,7 @@
       <%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['high']['fahrenheit']%> F 
       <p> Wind: <%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['avewind']['kph']%> km/h</p>
       <%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['avewind']['mph']%> mph
-      <p> Humidity: <%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['avehumidity']%></p>
+      <p> Humidity: <%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['avehumidity']%>%</p>
     </div>
   </div>
   <%end%>
