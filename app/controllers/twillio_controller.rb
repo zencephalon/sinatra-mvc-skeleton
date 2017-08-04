@@ -1,6 +1,6 @@
 # go to Downloads(where ngrok is)
 # ./ngrok http 9393
-# http://cbce6423.ngrok.io -> localhost:9393
+# http://0bc3c31a.ngrok.io -> localhost:9393
 
 post '/inbound' do
   p params

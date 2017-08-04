@@ -37,14 +37,14 @@ a:active {
 
 
 input {
-    width: 20%;
-    padding: 12px 20px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 3em 1em 5em / 0.5em 2em;
-    margin-left: 1em;
-    outline: none;
+  width: 20%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3em 1em 5em / 0.5em 2em;
+  margin-left: 1em;
+  outline: none;
 }
 
 
@@ -60,6 +60,8 @@ body {
 */  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Arial';
+
 }
 
 #login-form {
@@ -84,17 +86,15 @@ body {
   display: inline-block;
   text-align: center;
   margin: 0.7em auto 0 0.7em;
-  font-size:4em;
+  font-size: 3.5em;
   color: #f3f2f2;
-  
+  font-family: 'Raleway', sans-serif;
 }
 
 .marklogo {
   background-color: green;
-  opacity: 0.50;
-  border-radius: 0.2em;
-/*  border-top:0.2px solid black;
-  border-bottom:0.2px solid black;*/
+  opacity: 0.70;
+  border-radius: 0.15em;
 }
 
 .get-forecast{
@@ -123,28 +123,22 @@ body {
 }
 
 #clock {
-  display: inline-block;
-  text-align: center;
-  position: absolute;
-  top: 45%;
-  left: 43%;
-  color: white;
-/*  background-color: white;*/
-  opacity: 0.70;
   font-size: 4em;
-  border-radius: 0.2em;
 }
 
 #date {
+  font-size: 2em;
+}
+
+.datetime{
   display: inline-block;
   text-align: center;
   position: absolute;
-  top: 53%;
-  left: 45.5%;
   color: white;
   opacity: 0.70;
-  font-size: 2em;
-  border-radius: 0.2em;
+  /*font-size: 2em;*/
+  top: 45%;
+  left: 41%;
 }
 
 .icon {
@@ -231,14 +225,14 @@ body {
   margin-left: 3em;
 }
 .button5{
-    background-color: #555555;
-    color: white;
-    border: 1px solid black;
-    border-radius: 0.2em;
+  background-color: #555555;
+  color: white;
+  border: 1px solid black;
+  border-radius: 0.2em;
 }
 .button5:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 #registertext{
