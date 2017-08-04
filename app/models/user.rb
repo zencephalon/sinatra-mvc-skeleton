@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
   has_many :forecasts
 
-  validates :username, :email, :encrypted_password , presence:true
+  validates :username, :email, :phone_number, :encrypted_password , presence:true
   validates :email, uniqueness: true
+  validates :phone_number, length: { is: 10 }, numericality: {only_integer: true}
 
 
   def password
