@@ -1,8 +1,14 @@
 <%if @forecast%>
 
-<a class="changelocation" href="/forecasts/new">change location</a>
+<h2><a href="/forecasts/new"><mark id='location'><%=@location%></mark></a></h2>
 
-<h2><mark id='location'><%=@location%></mark></h2>
+<div class="menu">
+  <a href="/forecasts/<%=@forecast.id%>"><h3 id='tendaylink'>5 Day Weather</h3></a>
+
+  <a href="/forecasts/<%=@forecast.id%>/10day"><h3 id='tendaylink'>10 Day Weather</h3></a>
+
+  <a href="/forecasts/<%=@forecast.id%>/hourly/<%=@location%>"><h3 id='tendaylink'>Hourly Forecast</h3></a>
+</div>
 
 <div id='forecast-container'>
 
@@ -26,11 +32,4 @@
   <%end%>
 </div>
 
-<div class="menu">
-  <a href="/forecasts/<%=@forecast.id%>"><h3><mark id='tendaylink'>5 Day Weather</mark></h3></a>
-
-  <a href="/forecasts/<%=@forecast.id%>/10day"><h3><mark id='tendaylink'>10 Day Weather</mark></h3></a>
-
-  <a href="/forecasts/<%=@forecast.id%>/hourly/<%=@location%>"><h3><mark id='tendaylink'>Hourly Forecast</mark></h3></a>
-</div>
 <%end%>

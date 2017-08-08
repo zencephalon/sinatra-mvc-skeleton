@@ -55,9 +55,11 @@ input:focus {
 
 body {
   height: 100%;
-  background-image: url("https://unsplash.it/1600/1000/?image=699");
-/*  background-image: url("https://unsplash.it/1600/1000/?image=695");
-*/  background-attachment: fixed;
+      background-image: url("../img/paul-gilmore-pastourmatzis-146128.jpg");
+/*    background-image: url("https://unsplash.it/1600/1000/?image=876");*/
+/*  background-image: url("https://unsplash.it/1600/1000/?image=991");*/
+/*  background-image: url("https://unsplash.it/1600/1000/?image=695");*/
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Arial';
@@ -66,11 +68,11 @@ body {
 
 #login-form {
   margin-top: 4em;
-  margin-left: 2em;
+  margin:0 auto;
 }
 
 #register-form {
-  margin-top: 4em;
+  margin-top: -19em;
   margin-left: 2em;
 }
 
@@ -89,7 +91,9 @@ body {
   font-size: 3.5em;
   color: #f3f2f2;
   font-family: 'Raleway', sans-serif;
+
 }
+
 
 .marklogo {
   background-color: green;
@@ -103,7 +107,7 @@ body {
   font-size: 1.8em;
 }
 
-.changelocation{
+/*.changelocation{
   float:left;
   margin-left: -2.5em;
   margin-top: 6em;
@@ -119,7 +123,7 @@ body {
 .changelocation:hover{
   color: black;
   background-color: white;
-  opacity: 0.5; 
+  o*/pacity: 0.5; 
 }
 
 #clock {
@@ -152,18 +156,18 @@ body {
 }
 
 #location {
-  margin-left: -5%;
+  display: inline-block;
+  margin-left: 4%;
   text-align: center;
   border-radius: 0.2em;
   opacity: 0.60;
-  background-color: green;
+  background-color: black;
   color: #9cbab8;
   padding: 0.2em;
 }
 
 #forecast-container {
   text-align: center;
-
   position: relative;
   width: 100%;
   min-height: 100%;
@@ -182,25 +186,31 @@ body {
 }
 
 #tendaylink { 
-  text-align: center;
-  border-radius: 0.2em;
-  padding: 0.2em;
-  opacity: 0.85;
-  background-color: green;
-  box-shadow: 6px 6px 1px black;
-  border:1px solid black;
+    display: inline;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #9cbab8;
 }
 
 #tendaylink:hover {
-  background-color: green;
+ 
   text-decoration: none; 
-  opacity: 0.95;
-  box-shadow: 3px 3px 2px black;
-  border:1px solid black;   
+ 
   }
 
 .menu{
   text-align: center;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0.7em 1em;
+  background:rgba(0, 0, 0, 0.4);
+  border-radius: 0.6;
+  box-shadow: 5px 5px 20px black;
+    
 }
 
 .userprofile{
@@ -238,18 +248,20 @@ body {
 #registertext{
   text-align: center;
   background:rgba(0, 0, 0, 0.2);
-  border-radius: 0.4em;
+  border-radius: 0em;
   box-shadow: 3px 3px 10px black;
   width: 70%;
   min-height: 100%;
   max-width: 40%;
-  margin: 0 auto;
+  margin: 1em auto;
   padding: 1em 1em;
 
-  color: black;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 1px grey;
-  border-bottom: 1px solid grey;
-  border-top: 1px solid grey;
+  color: #9cbab8;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 1px black;
   
+}
+
+.lasttext{
+margin-top: 5em;
 }
