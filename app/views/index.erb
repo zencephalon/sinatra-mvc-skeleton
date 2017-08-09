@@ -1,4 +1,4 @@
-<a class="get-forecast">SMS on your phone</a>
+<a class="get-forecast" href="/forecasts/new">on your phone</a>
 
 <div class=datetime>
 <div id='clock'>
@@ -6,3 +6,10 @@
 <div id='date'>
 </div>
 </div>
+
+<form id="forecast-indexform" action="/forecasts" method = "post">
+	<input type = "text" name = "forecast[city]" value="<%=@forecast.city%>"  placeholder="enter city">
+	<input type = "text" name = "forecast[country]" value="<%=@forecast.country%>"  placeholder="enter country or state">
+	<input type = "submit", value = "get forecast">
+<%= erb :'_errors' %>
+</form>

@@ -1,9 +1,28 @@
 .right-menu {
-  float: right;
+/*  display: inline-block;
+  position: relative;*/
   margin-right: 5%;
   margin-top: 3%;
   text-decoration: none;
   font-size: 1.2em;
+  float: right;
+
+}
+
+.right-menu-button{
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.2em;
+  opacity: 0.60;
+  background-color: black;
+  color: white;
+  padding: 0.3em;
+  font-size: 1em;
+}
+
+.right-menu-button:hover {
+  background-color: white;
+  color: black;
 }
 
 a:link {
@@ -38,7 +57,7 @@ a:active {
 
 input {
   width: 20%;
-  padding: 12px 20px;
+  padding: 0.7em 1em;
   margin: 10px 0;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -56,7 +75,7 @@ input:focus {
 body {
   height: 100%;
       background-image: url("../img/paul-gilmore-pastourmatzis-146128.jpg");
-/*    background-image: url("https://unsplash.it/1600/1000/?image=876");*/
+/*  background-image: url("https://unsplash.it/1600/1000/?image=876");*/
 /*  background-image: url("https://unsplash.it/1600/1000/?image=991");*/
 /*  background-image: url("https://unsplash.it/1600/1000/?image=695");*/
   background-attachment: fixed;
@@ -67,7 +86,7 @@ body {
 }
 
 #login-form {
-  margin:4em;
+  margin-top:4em;
   margin-left: 2em;
  
 }
@@ -78,8 +97,18 @@ body {
 }
 
 #forecast-form {
- margin-left: 3em;
- margin-top: 10em;
+  text-align: center;
+  position: relative;
+  width: 80%;
+  min-height: 100%;
+  max-width: 70%;
+  margin: 1em auto;
+  padding: 1em 2em;
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 0.6em;
+  box-shadow: 5px 5px 20px black;
+  margin-top: 15%;
+
 
 }
 
@@ -107,18 +136,6 @@ body {
   border-radius: 0.15em;
 }
 
-.right-menu-button{
-  display: inline-block;
-  margin-left: -0.1em;
-  /*margin-top: -1.5em;*/
-  text-align: center;
-  border-radius: 0.2em;
-  opacity: 0.60;
-  background-color: black;
-  color: #9cbab8;
-  padding: 0.2em;
-  font-size: 1em;
-}
 
 .get-forecast{
   display: inline-block;
@@ -134,42 +151,28 @@ body {
 
 }
 
-/*.changelocation{
-  float:left;
-  margin-left: -2.5em;
-  margin-top: 6em;
-  font-size: 1.5em;
-  color: grey;
-  background:rgba(0, 0, 0, 0.4);
-  border-radius: 0.3em;
-  box-shadow: 1px 2px 10px black;
-  padding: 1px 5px;
-  transform: rotate(-90deg)
-}
-
-.changelocation:hover{
-  color: black;
-  background-color: white;
-  o*/pacity: 0.5; 
-}
-
 #clock {
-  font-size: 4em;
+  font-size: 1.5em;
+  color: white;
 }
 
 #date {
   font-size: 2em;
+  color: white;
 }
 
 .datetime{
-  display: inline-block;
   text-align: center;
-  position: absolute;
-  color: white;
-  opacity: 0.70;
-  /*font-size: 2em;*/
-  top: 45%;
-  left: 41%;
+  position: relative;
+/*  width: 100%;
+  min-height: 100%;*/
+  max-width: 20%;
+  margin: 0 auto;
+  padding: 1em 1em;
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 0.6em;
+  box-shadow: 5px 5px 20px black;
+  margin-top: 15%;
 }
 
 .icon {
@@ -193,6 +196,13 @@ body {
   padding: 0.2em;
 }
 
+
+#location:hover:before {
+    content: 'Replace ';
+  
+}
+
+
 #forecast-container {
   text-align: center;
   position: relative;
@@ -213,19 +223,18 @@ body {
 }
 
 #tendaylink { 
-    display: inline;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: #9cbab8;
+  display: inline;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #9cbab8;
 }
 
-#tendaylink:hover {
+  #tendaylink:hover {
+  color: white;
+  
+} 
  
-  text-decoration: none; 
- 
-  }
-
 .menu{
   text-align: center;
   position: relative;
@@ -292,4 +301,21 @@ body {
 
 .lasttext{
 margin-top: 5em;
+}
+
+
+#forecast-indexform{
+  text-align: center;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  max-width: 70%;
+  margin: 0em auto;
+  padding: 1em 1em;
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 0.6em;
+  box-shadow: 5px 5px 20px black;
+  margin-top: 13%;
+
+ 
 }
