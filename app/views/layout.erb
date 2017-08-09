@@ -30,19 +30,21 @@
   <!--   <a href="/"><img src="/img/zenchinese.png" class="logo"></a> -->
   
   <a href="/"><h1 class="logo"><mark class='marklogo'>we</mark>ather</h1></a>
+  
 
 
 
 <div class='right-menu'>
   <%if !session[:id]%>
-  <a href="/sessions/new">Login</a> |
-  <a class='registerbutton' href="/users/new">Register</a>
+  <a class="right-menu-button" href="/forecasts/new">Forecast</a>
+  <a class="right-menu-button" href="/sessions/new">Login</a> 
+  <a class="right-menu-button" href="/users/new">Register</a>
   <%else%>
 
-<a href="/users/<%=current_user.id%>">Hello <%=current_user.username%></a> |
+<a  class="right-menu-button" href="/users/<%=current_user.id%>"><%=current_user.username%>'s profile</a>
   <form method = "post" action = "/sessions/<%=session[:id]%>">
     <input type= "hidden" name = "_method" value="delete">
-    <button class="button5 type = "submit"> Log out </button>
+    <button class="right-menu-button" type = "submit"> Log out </button>
   </form>
 <!--  <a href="/sessions/<%=session[:id]%>">logout</a> -->
   <%end%>

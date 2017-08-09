@@ -4,9 +4,9 @@
 <h2><a href="/forecasts/new"><mark id='location'><%=@weather_json['current_observation']['display_location']['full']%></mark></a></h2>
 
 <div class="menu">
-  <a href="/forecasts/<%=@forecast.id%>"><h3 id='tendaylink'>5 Day Forecast</h3></a>
+  <a href="/forecasts/<%=@forecast.id%>"><h3 id='tendaylink'>5 Day Forecast</h3></a>||
 
-  <a href="/forecasts/<%=@forecast.id%>/hourly/<%=@weather_json['current_observation']['display_location']['full']%>"><h3 id='tendaylink'>Hourly Forecast</h3></a>
+  <a href="/forecasts/<%=@forecast.id%>/hourly/<%=@weather_json['current_observation']['display_location']['full']%>"><h3 id='tendaylink'>Hourly Forecast</h3></a>||
 
   <a href="/forecasts/<%=@forecast.id%>/hourly10day/<%=@weather_json['current_observation']['display_location']['full']%>"><h3 id='tendaylink'>Hourly 10 day Forecast</h3></a>
 </div>
