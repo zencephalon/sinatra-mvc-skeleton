@@ -15,8 +15,8 @@
 
   <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
-<!--   <link href="https://fonts.googleapis.com/css?family=Questrial|Cinzel+Decorative" rel="stylesheet"> -->
-    
+  <!--   <link href="https://fonts.googleapis.com/css?family=Questrial|Cinzel+Decorative" rel="stylesheet"> -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
@@ -24,35 +24,49 @@
 
   <title></title>
 </head>
-<body>
-<div id="content">
-  <header>
+
+<div class="demo">
+
+<header>
   <!--   <a href="/"><img src="/img/zenchinese.png" class="logo"></a> -->
   
   <a href="/"><h1 class="logo"><mark class='marklogo'>we</mark>ather</h1></a>
- 
 
 
 
-<div class='right-menu'>
-  <%if !session[:id]%>
-  <a class="right-menu-button" href="/forecasts/new">Forecast</a>
-  <a class="right-menu-button" href="/sessions/new">Login</a> 
-  <a class="right-menu-button" href="/users/new">Register</a>
-  <%else%>
 
-<a  class="right-menu-button" href="/users/<%=current_user.id%>"><%=current_user.username%>'s profile</a>
-  <form method = "post" action = "/sessions/<%=session[:id]%>">
-    <input type= "hidden" name = "_method" value="delete">
-    <button class="right-menu-button" type = "submit"> Log out </button>
-  </form>
-<!--  <a href="/sessions/<%=session[:id]%>">logout</a> -->
-  <%end%>
-</div>
+  <div class='right-menu'>
+    <%if !session[:id]%>
+    <a class="right-menu-button" href="/forecasts/new">Forecast</a>
+    <a class="right-menu-button" href="">About</a>
+    <a class="right-menu-button" href="/sessions/new">Login</a> 
+    <a class="right-menu-button" href="/users/new">Register</a>
+    <%else%>
 
-  </header>
+    <a  class="right-menu-button" href="/users/<%=current_user.id%>"><%=current_user.username%>'s profile</a>
+    <form method = "post" action = "/sessions/<%=session[:id]%>">
+      <input type= "hidden" name = "_method" value="delete">
+      <button class="right-menu-button" type = "submit"> Log out </button>
+    </form>
+    <!--  <a href="/sessions/<%=session[:id]%>">logout</a> -->
+    <%end%>
+  </div>
+
+</header>
+
+<body>
+
   <%= yield %>
-</div>
+
 </body>
+
+</div>
+
+<div class="footer">
+<a class="about" href="">About</a>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
 
 </html>
