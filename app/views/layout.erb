@@ -27,43 +27,44 @@
 
 <div class="demo">
 
-<header>
-  <!--   <a href="/"><img src="/img/zenchinese.png" class="logo"></a> -->
-  
-  <a href="/"><h1 class="logo"><mark class='marklogo'>we</mark>ather</h1></a>
+  <header>
+    <!--   <a href="/"><img src="/img/zenchinese.png" class="logo"></a> -->
+
+    <a href="/"><h1 class="logo"><mark class='marklogo'>we</mark>ather</h1></a>
 
 
 
 
-  <div class='right-menu'>
-    <%if !session[:id]%>
-    <a class="right-menu-button" href="/forecasts/new">Forecast</a>
-    <a class="right-menu-button" href="">About</a>
-    <a class="right-menu-button" href="/sessions/new">Login</a> 
-    <a class="right-menu-button" href="/users/new">Register</a>
-    <%else%>
+    <div class='right-menu'>
+      <%if !session[:id]%>
+      <a class="right-menu-button" href="/forecasts/new">Forecast</a>
+      <a class="right-menu-button" href="/sessions/new">Login</a> 
+      <a class="right-menu-button" href="/users/new">Register</a>
+      <%else%>
 
-    <a  class="right-menu-button" href="/users/<%=current_user.id%>"><%=current_user.username%>'s profile</a>
-    <form method = "post" action = "/sessions/<%=session[:id]%>">
-      <input type= "hidden" name = "_method" value="delete">
-      <button class="right-menu-button" type = "submit"> Log out </button>
-    </form>
-    <!--  <a href="/sessions/<%=session[:id]%>">logout</a> -->
-    <%end%>
-  </div>
+      <a  class="right-menu-button" href="/users/<%=current_user.id%>"><%=current_user.username%>'s profile</a>
+      <form method = "post" action = "/sessions/<%=session[:id]%>">
+        <input type= "hidden" name = "_method" value="delete">
+        <button class="right-menu-button" type = "submit"> Log out </button>
+      </form>
+      <!--  <a href="/sessions/<%=session[:id]%>">logout</a> -->
+      <%end%>
+    </div>
 
-</header>
+  </header>
 
-<body>
+  <body>
 
-  <%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 
 </div>
 
 <div class="footer">
-<a class="about" href="">About</a>
+
+<p class="copywrite">&copy; 2017 Weather</p>
+<a class="about" href="">about</a>
 </div>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>

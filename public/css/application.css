@@ -208,6 +208,10 @@ body {
   
 }
 
+.wrapper{
+  display: inline-block;
+  margin-bottom: 3%;
+}
 
 #forecast-container {
   text-align: center;
@@ -350,38 +354,45 @@ margin-top: 5em;
 } 
 
 
-
 .demo {
   margin: 0 auto;
-/*  padding-top: 64px;
-  max-width: 640px;
-  width: 94%;*/
 }
 
 .footer {
   position: absolute;
+  text-align: center;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 0.5em;
+  padding: 0.3em;
   
-  text-align: right;
 
-   background:rgba(0, 0, 0, 0.5);
+
+  background:rgba(0, 0, 0, 0.3);
   border-radius: 0.6em;
   box-shadow: 5px 5px 20px black;
-  margin-top: 20px;
+  margin: 0 auto;
+  max-width: 40%;
+  
   
 }
 
 .about{
-color: white;
+color: #8ecfd7;
 margin-right: 0.5em;
+border: 0.5px solid #8ecfd7;
+padding: 3px;
    
 }
 
 
 .about:hover {
+  display: inline;
   background-color: white;
   color: black;
+}
+.copywrite{
+  display: inline;
+  color: #8ecfd7;
+  padding-right: 1em;
 }

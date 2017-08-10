@@ -10,26 +10,27 @@
   <a href="/forecasts/<%=@forecast.id%>/hourly/<%=@location%>"><h3 id='tendaylink'>Hourly Forecast</h3></a>
 </div>
 
-<div id='forecast-container'>
+<div class="wrapper">
+  <div id='forecast-container'>
 
 
-  <%(0..236).each do |number|%>
-  
-  <div class="forecast">
-    <h3><%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['weekday_name']%> <%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['mon']%>.<%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['mday']%>.<%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['year']%></h3>
+    <%(0..236).each do |number|%>
     
-    <div class='icon'>
-    <h3><%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['civil']%></h3>
-      <img src=<%=@weather_hourly['hourly_forecast'][number]['icon_url']%>>
-      <p><%=@weather_hourly['hourly_forecast'][number]['condition']%></p>
-      <p> Temperature: <%=@weather_hourly['hourly_forecast'][number]['temp']['metric']%> ℃</p>
-      <%=@weather_hourly['hourly_forecast'][number]['temp']['english']%> F 
-      <p> Wind: <%=@weather_hourly['hourly_forecast'][number]['wspd']['metric']%> km/h</p>
-      <%=@weather_hourly['hourly_forecast'][number]['wspd']['english']%> mph
-      <p> Humidity: <%=@weather_hourly['hourly_forecast'][number]['humidity']%>%</p>
+    <div class="forecast">
+      <h3><%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['weekday_name']%> <%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['mon']%>.<%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['mday']%>.<%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['year']%></h3>
+      
+      <div class='icon'>
+        <h3><%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['civil']%></h3>
+        <img src=<%=@weather_hourly['hourly_forecast'][number]['icon_url']%>>
+        <p><%=@weather_hourly['hourly_forecast'][number]['condition']%></p>
+        <p> Temperature: <%=@weather_hourly['hourly_forecast'][number]['temp']['metric']%> ℃</p>
+        <%=@weather_hourly['hourly_forecast'][number]['temp']['english']%> F 
+        <p> Wind: <%=@weather_hourly['hourly_forecast'][number]['wspd']['metric']%> km/h</p>
+        <%=@weather_hourly['hourly_forecast'][number]['wspd']['english']%> mph
+        <p> Humidity: <%=@weather_hourly['hourly_forecast'][number]['humidity']%>%</p>
+      </div>
     </div>
+    <%end%>
   </div>
-  <%end%>
 </div>
-
 <%end%>
