@@ -14,7 +14,6 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-
   font-family: 'Roboto', sans-serif;
 }
 
@@ -26,7 +25,6 @@ body {
   text-decoration: none;
   float: right;
   font-family: 'Raleway', sans-serif;
-
 }
 
 .right-menu-button{
@@ -37,9 +35,7 @@ body {
   background-color: black;
   color: white;
   padding: 0.4em;
-  font-size: 1em;
-
-
+  font-size: 1em;`
 }
 
 .right-menu-button:hover {
@@ -86,7 +82,7 @@ input {
 }
 
 input:focus {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 
@@ -120,17 +116,68 @@ input:focus {
 }
 
 
-
 #login-form {
   margin-top:10em;
   margin-left: 2em; 
 }
 
+#login-form input:focus {
+  border: 1px solid black;
+}
+
+
+#login-form input {
+  width: 18%;
+  padding: 0.7em 1em;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+ /* border-radius: 3em 1em 5em / 0.5em 2em;*/
+  border-radius: 0.5em;
+  margin-left: 1em;
+  outline: none;
+}
+
 #register-form {
-  margin-top: -19em;
+  margin-top: -20em;
   margin-left: 2em;
 }
 
+
+#register-form input {
+  width: 18%;
+  padding: 0.7em 1em;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+ /* border-radius: 3em 1em 5em / 0.5em 2em;*/
+  border-radius: 0.5em;
+  margin-left: 1em;
+  outline: none;
+}
+
+#register-form input:focus {
+  border: 1px solid black;
+}
+
+#registertext{
+  text-align: center;
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 0em;
+  box-shadow: 3px 3px 10px black;
+  width: 70%;
+  min-height: 100%;
+  max-width: 40%;
+  margin: 1em auto;
+  padding: 1em 1em;
+  color: #9cbab8;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.lasttext{
+  margin-top: 9em;
+}
 
 
 .logo {
@@ -197,8 +244,6 @@ input:focus {
 .logindatetime{
   text-align: center;
   position: relative;
-/*  width: 100%;
-  min-height: 100%;*/
   max-width: 20%;
   margin: 0 auto;
   padding: 1em 1em;
@@ -233,8 +278,7 @@ input:focus {
 
 
 #location:hover:before {
-    content: 'Replace ';
-  
+  content: 'Replace ';  
 }
 
 .wrapper{
@@ -253,7 +297,6 @@ input:focus {
   background:rgba(0, 0, 0, 0.2);
   border-radius: 0.6em;
   box-shadow: 5px 5px 20px black;
-
 }
 
 .forecast {
@@ -270,9 +313,8 @@ input:focus {
   color: #9cbab8;
 }
 
-  #tendaylink:hover {
-  color: white;
-  
+#tendaylink:hover {
+  color: white; 
 } 
  
 .menu{
@@ -285,9 +327,7 @@ input:focus {
   padding: 0.7em 1em;
   background:rgba(0, 0, 0, 0.6);
   border-radius: 0.6em;
-  box-shadow: 5px 5px 20px black;
-
-    
+  box-shadow: 5px 5px 20px black;  
 }
 
 .userprofile{
@@ -302,46 +342,29 @@ input:focus {
   padding: 1em 1em;
   margin-top: 3em;
   margin-left: 3em;
-
 }
+
 #editheadline{
   margin-left: 2em;
 }
+
 #edit-form {
   margin-top: 2em;
   margin-left: 3em;
 }
+
 .button5{
   background-color: #555555;
   color: white;
   border: 1px solid black;
   border-radius: 0.2em;
 }
+
 .button5:hover {
   background-color: white;
   color: black;
 }
 
-#registertext{
-  text-align: center;
-  background:rgba(0, 0, 0, 0.2);
-  border-radius: 0em;
-  box-shadow: 3px 3px 10px black;
-  width: 70%;
-  min-height: 100%;
-  max-width: 40%;
-  margin: 1em auto;
-  padding: 1em 1em;
-
-  color: #9cbab8;
-  letter-spacing: 3px;
-  text-shadow: 1px 1px 1px black;
-  
-}
-
-.lasttext{
-margin-top: 5em;
-}
 
 #myBtn {
   display: none;
@@ -363,9 +386,7 @@ margin-top: 5em;
   width: 71px;
   text-align: center;
   box-shadow: 0px 0px 3px -1px #555;
-  transition: bottom 0.2s ease-in-out;
-    
-   
+  transition: bottom 0.2s ease-in-out;   
 }
 
 #myBtn:hover {
@@ -387,12 +408,8 @@ margin-top: 5em;
   bottom: 0;
   left: 0;
   padding: 0.6em;
-/*  background:rgba(0, 0, 0, 0.3);
-  border-radius: 0.6em;
-  box-shadow: 5px 5px 20px black;*/
   margin: 0 auto;
   max-width: 40%; 
-
   border-radius: 0.8em 0.8em 0em 0em;
   opacity: 0.40;
   background-color: black;
@@ -400,11 +417,11 @@ margin-top: 5em;
 }
 
 .about{
-color: #9cbab8;
-margin-right: 0.5em;
-border: 0.5px solid #9cbab8;
-padding: 3px;
-font-size: 0.8em;
+  color: #9cbab8;
+  margin-right: 0.5em;
+  border: 0.5px solid #9cbab8;
+  padding: 3px;
+  font-size: 0.8em;
 }
 
 
@@ -413,6 +430,7 @@ font-size: 0.8em;
   background-color: white;
   color: black;
 }
+
 .copywrite{
   display: inline;
   color: #9cbab8;

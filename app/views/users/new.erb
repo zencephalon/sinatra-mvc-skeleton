@@ -12,7 +12,7 @@
     <input type = "email" name = "user[email]" value="<%=@user.email %>" placeholder="enter email"><br>
     <input type="phone-number" name="user[phone_number]" value="<%=@user.phone_number %>" placeholder="phone number(4156667777)"  pattern="[0-9]{10}"><br>
     <input type = "password" name = "user[password]" placeholder="enter password"><br>
-    <input type = "submit", value = "Register User">
+    <input id="forecastbutton" type = "submit", value = "Register User">
 
 		<%= erb :'_errors' %>
 		
@@ -26,5 +26,5 @@
 </div> -->
 
 
-
+<!-- pattern="\d{3}[\-]\d{3}[\-]\d{4}"-->
 
