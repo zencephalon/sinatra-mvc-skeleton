@@ -1,11 +1,31 @@
+
+html { 
+height: 100%; 
+} 
+
+body {
+  /*height: 100%;*/
+  min-height:100%;
+  position: relative;
+  background-image: url("../img/paul-gilmore-pastourmatzis-146128.jpg");
+/*  background-image: url("https://unsplash.it/1600/1000/?image=876");*/
+/*  background-image: url("https://unsplash.it/1600/1000/?image=991");*/
+/*  background-image: url("https://unsplash.it/1600/1000/?image=695");*/
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: 'Roboto', sans-serif;
+}
+
 .right-menu {
 /*  display: inline-block;
   position: relative;*/
   margin-right: 5%;
   margin-top: 3%;
   text-decoration: none;
-  font-size: 1.2em;
   float: right;
+  font-family: 'Raleway', sans-serif;
 
 }
 
@@ -16,8 +36,10 @@
   opacity: 0.60;
   background-color: black;
   color: white;
-  padding: 0.3em;
+  padding: 0.4em;
   font-size: 1em;
+
+
 }
 
 .right-menu-button:hover {
@@ -42,43 +64,62 @@ a:active {
 }
 
 .errors{
-  color: white;
+  color:  #ffd100;
 }
 
 
 input {
-  width: 20%;
+  width: 25%;
   padding: 0.7em 1em;
   margin: 10px 0;
   box-sizing: border-box;
   border: 1px solid #ccc;
-  border-radius: 3em 1em 5em / 0.5em 2em;
+ /* border-radius: 3em 1em 5em / 0.5em 2em;*/
+  border-radius: 0.5em;
   margin-left: 1em;
   outline: none;
 }
+#forecastbutton:hover{
+  color: #006881;
+  border: 1px solid black;
 
+}
 
 input:focus {
     border: 1px solid black;
 }
 
-html { 
-height: 100%; 
-} 
 
-body {
-  /*height: 100%;*/
-  min-height:100%;
+#forecast-form {
+  text-align: center;
   position: relative;
-  background-image: url("../img/paul-gilmore-pastourmatzis-146128.jpg");
-/*  background-image: url("https://unsplash.it/1600/1000/?image=876");*/
-/*  background-image: url("https://unsplash.it/1600/1000/?image=991");*/
-/*  background-image: url("https://unsplash.it/1600/1000/?image=695");*/
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Arial';
+  width: 100%;
+  min-height: 100%;
+  max-width: 55%;
+  margin: 0em auto;
+  /*padding: 1em 1em;*/
+  background:rgba(0, 0, 0, 0.3);
+  border-radius: 0.5em;
+  box-shadow: 5px 5px 20px black;
+  margin-top: 14%;
 }
+
+#forecast-indexform{
+  text-align: center;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  max-width: 55%;
+  margin: 0em auto;
+  /*padding: 1em 1em;*/
+  background:rgba(0, 0, 0, 0.3);
+  border-radius: 0.5em;
+  box-shadow: 5px 5px 20px black;
+  margin-top: 2%; 
+
+}
+
+
 
 #login-form {
   margin-top:10em;
@@ -90,19 +131,7 @@ body {
   margin-left: 2em;
 }
 
-#forecast-form {
-  text-align: center;
-  position: relative;
-  width: 80%;
-  min-height: 100%;
-  max-width: 70%;
-  margin: 1em auto;
-  padding: 1em 2em;
-  background:rgba(0, 0, 0, 0.2);
-  border-radius: 0.6em;
-  box-shadow: 5px 5px 20px black;
-  margin-top: 15%;
-}
+
 
 .logo {
   height: 1.5em;
@@ -314,22 +343,6 @@ body {
 margin-top: 5em;
 }
 
-
-#forecast-indexform{
-  text-align: center;
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  max-width: 70%;
-  margin: 0em auto;
-  padding: 1em 1em;
-  background:rgba(0, 0, 0, 0.2);
-  border-radius: 0.6em;
-  box-shadow: 5px 5px 20px black;
-  margin-top: 13%; 
-}
-
-
 #myBtn {
   display: none;
   position: fixed;
@@ -364,6 +377,7 @@ margin-top: 5em;
 
 .demo {
   margin: 0 auto;
+  padding-bottom: 1.4em;
 }
 
 .footer {
@@ -372,25 +386,25 @@ margin-top: 5em;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 0.3em;
-  
-
-
-  background:rgba(0, 0, 0, 0.3);
+  padding: 0.6em;
+/*  background:rgba(0, 0, 0, 0.3);
   border-radius: 0.6em;
-  box-shadow: 5px 5px 20px black;
+  box-shadow: 5px 5px 20px black;*/
   margin: 0 auto;
-  max-width: 40%;
-  
-  
+  max-width: 40%; 
+
+  border-radius: 0.8em 0.8em 0em 0em;
+  opacity: 0.40;
+  background-color: black;
+  color: #9cbab8; 
 }
 
 .about{
-color: #8ecfd7;
+color: #9cbab8;
 margin-right: 0.5em;
-border: 0.5px solid #8ecfd7;
+border: 0.5px solid #9cbab8;
 padding: 3px;
-   
+font-size: 0.8em;
 }
 
 
@@ -401,6 +415,9 @@ padding: 3px;
 }
 .copywrite{
   display: inline;
-  color: #8ecfd7;
+  color: #9cbab8;
   padding-right: 1em;
+  font-size: 0.8em;
 }
+
+

@@ -10,15 +10,15 @@
 <form id='register-form' method = "post" action = "/users">
     <input type = "text" name = "user[username]" value="<%=@user.username %>" placeholder="enter username"><br>
     <input type = "email" name = "user[email]" value="<%=@user.email %>" placeholder="enter email"><br>
-    <input type="phone-number" name="user[phone_number]" value="<%=@user.phone_number %>" placeholder="phone number(4156667777)"><br>
+    <input type="phone-number" name="user[phone_number]" value="<%=@user.phone_number %>" placeholder="phone number(4156667777)"  pattern="[0-9]{10}"><br>
     <input type = "password" name = "user[password]" placeholder="enter password"><br>
     <input type = "submit", value = "Register User">
 
 		<%= erb :'_errors' %>
 		
-<!-- </form>
+</form>
 
-<div class=datetime>
+<!-- <div class=datetime>
 <div id='clock'>
 </div>
 <div id='date'>
