@@ -98,6 +98,7 @@ input:focus {
   border-radius: 0.5em;
   box-shadow: 5px 5px 20px black;
   margin-top: 14%;
+  font-family: 'Raleway', sans-serif;
 }
 
 #forecast-indexform{
@@ -112,13 +113,14 @@ input:focus {
   border-radius: 0.5em;
   box-shadow: 5px 5px 20px black;
   margin-top: 2%; 
-
+  font-family: 'Raleway', sans-serif;
 }
 
 
 #login-form {
   margin-top:10em;
-  margin-left: 2em; 
+  margin-left: 2em;
+  font-family: 'Raleway', sans-serif; 
 }
 
 #login-form input:focus {
@@ -141,6 +143,7 @@ input:focus {
 #register-form {
   margin-top: -20em;
   margin-left: 2em;
+  font-family: 'Raleway', sans-serif; 
 }
 
 

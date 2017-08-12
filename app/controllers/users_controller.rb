@@ -12,6 +12,10 @@ get '/users/new' do
   erb :'users/new'
 end
 
+get '/users/about' do 
+  erb :'users/about'
+end
+
 
 #create new
 post '/users' do
@@ -70,5 +74,9 @@ delete '/users/:id' do
   session[:id] = nil
   redirect '/'
 end
+
+
+
+
 
 
