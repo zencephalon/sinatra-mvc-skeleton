@@ -1,8 +1,13 @@
 <a class="get-forecast">forecast for any location</a>
 
 <form id="forecast-form" action="/forecasts" method = "post">
-	<input type = "text" name = "forecast[city]" value="<%=@forecast.city%>"  placeholder="enter city">
-	<input type = "text" name = "forecast[country]" value="<%=@forecast.country%>"  placeholder="enter country or state">
+	<input class="input-field" type = "text" name = "forecast[city]" value="<%=@forecast.city%>"  placeholder="enter city">
+	<input class="input-field" type = "text" name = "forecast[country]" value="<%=@forecast.country%>"  placeholder="enter country or state">
+
+	<%if session[:id]%>
+	 <input type="hidden" name="forecast[user_id]" value="<%=session[:id]%>">
+	 <%end%>
+	 
 	<input type = "submit", value = "get forecast" id='forecastbutton'>
 <%= erb :'_errors' %>
 </form>

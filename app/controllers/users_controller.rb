@@ -51,6 +51,7 @@ get '/users/:id/edit' do
   erb :'users/edit'
 end
 
+
 #update
 put '/users/:id' do
   @user = User.find(params[:id])
@@ -75,7 +76,13 @@ delete '/users/:id' do
   redirect '/'
 end
 
-
+get '/users/:id/forecasts' do
+  @user = User.find(params[:id])
+  p @user.forecasts
+  if session[:id] = @user.id
+    erb :'users/forecasts'
+  end
+end
 
 
 

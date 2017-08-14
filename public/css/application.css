@@ -18,13 +18,41 @@ body {
 }
 
 .right-menu {
-/*  display: inline-block;
-  position: relative;*/
+  display: inline-block;
+  position: relative;
   margin-right: 5%;
   margin-top: 3%;
   text-decoration: none;
   float: right;
   font-family: 'Raleway', sans-serif;
+}
+
+.input-field{
+  opacity: 0.5;
+  
+}
+
+.input-field:focus{
+  color: black;
+  opacity: 0.6;
+}
+
+
+input {
+  width: 25%;
+  padding: 0.7em 1em;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+ /* border-radius: 3em 1em 5em / 0.5em 2em;*/
+  border-radius: 0.5em;
+  margin-left: 1em;
+  outline: none;
+
+}
+
+input:focus {
+  border: 1px solid black;
 }
 
 .right-menu-button{
@@ -63,30 +91,16 @@ a:active {
   color:  #ffd100;
 }
 
-
-input {
-  width: 25%;
-  padding: 0.7em 1em;
-  margin: 10px 0;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
- /* border-radius: 3em 1em 5em / 0.5em 2em;*/
-  border-radius: 0.5em;
-  margin-left: 1em;
-  outline: none;
+#forecastbutton{ 
 }
+
 #forecastbutton:hover{
   color: #006881;
   border: 1px solid black;
-
-}
-
-input:focus {
-  border: 1px solid black;
 }
 
 
-#forecast-form {
+#forecast-form, #forecast-indexform{
   text-align: center;
   position: relative;
   width: 100%;
@@ -97,23 +111,12 @@ input:focus {
   background:rgba(0, 0, 0, 0.3);
   border-radius: 0.5em;
   box-shadow: 5px 5px 20px black;
-  margin-top: 14%;
+  margin-top: 16%;
   font-family: 'Raleway', sans-serif;
 }
 
 #forecast-indexform{
-  text-align: center;
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  max-width: 55%;
-  margin: 0em auto;
-  /*padding: 1em 1em;*/
-  background:rgba(0, 0, 0, 0.3);
-  border-radius: 0.5em;
-  box-shadow: 5px 5px 20px black;
-  margin-top: 2%; 
-  font-family: 'Raleway', sans-serif;
+  margin-top: 17%; 
 }
 
 
@@ -165,7 +168,7 @@ input:focus {
 
 #registertext{
   text-align: center;
-  background:rgba(0, 0, 0, 0.2);
+  background:rgba(50, 50, 50, 0.7);
   border-radius: 0em;
   box-shadow: 3px 3px 10px black;
   width: 70%;
@@ -179,7 +182,7 @@ input:focus {
 }
 
 .lasttext{
-  margin-top: 9em;
+  margin-top: 3em;
 }
 
 
@@ -193,8 +196,8 @@ input:focus {
   color: #f3f2f2;
   font-family: 'Raleway', sans-serif;
   margin-bottom: -23px;
-
 }
+
 
 .marklogo {
   background-color: #8ecfd7;
@@ -228,7 +231,7 @@ input:focus {
 
 #date {
   font-size: 2em;
-  color: white;
+  color: #f3f2f2;
 }
 
 .datetime{
@@ -361,6 +364,9 @@ input:focus {
   color: white;
   border: 1px solid black;
   border-radius: 0.2em;
+  font-family: 'Raleway', sans-serif;
+      height: 2em;
+    width: 10em;
 }
 
 .button5:hover {
@@ -439,6 +445,11 @@ input:focus {
   color: #9cbab8;
   padding-right: 1em;
   font-size: 0.8em;
+}
+
+
+#logout-button{
+  display: inline-block;
 }
 
 

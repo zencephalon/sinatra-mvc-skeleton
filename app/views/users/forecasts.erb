@@ -1,0 +1,9 @@
+<h1>User forecasts</h1>
+<div class="users">
+  <ul>
+    <% @user.forecasts.each do |forecast| %>
+      <li><%= forecast.country %></li>
+
+    <% end %>
+  </ul>
+</div>

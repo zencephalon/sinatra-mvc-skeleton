@@ -40,7 +40,7 @@
       <%else%>
 
       <a  class="right-menu-button" href="/users/<%=current_user.id%>"><%=current_user.username%>'s profile</a>
-      <form method = "post" action = "/sessions/<%=session[:id]%>">
+      <form id="logout-button" method = "post" action = "/sessions/<%=session[:id]%>">
         <input type= "hidden" name = "_method" value="delete">
         <button class="right-menu-button" type = "submit"> Log out </button>
       </form>

@@ -3,8 +3,9 @@ class CreateForecasts < ActiveRecord::Migration
     create_table :forecasts do |t|
       t.string :country, null: false
       t.string :city, null: false
+      t.integer :user_id
 
-      t.timestamps
+      t.timestamps(null: false)
     end
   end
 end
