@@ -168,21 +168,33 @@ a:active {
 
 #registertext{
   text-align: center;
-  background:rgba(50, 50, 50, 0.7);
-  border-radius: 0em;
+  background:rgba(50, 50, 50, 0.5);
+  border-radius: 0.4em;
   box-shadow: 3px 3px 10px black;
   width: 70%;
   min-height: 100%;
-  max-width: 40%;
+  max-width: 90%;
   margin: 1em auto;
   padding: 1em 1em;
-  color: #9cbab8;
   letter-spacing: 2px;
   text-shadow: 1px 1px 1px black;
 }
 
 .lasttext{
   margin-top: 3em;
+  text-align: center;
+  background:rgba(0, 0, 0, 0.4);
+  border-radius: 0.4em;
+  box-shadow: 3px 3px 10px black;
+  width: 100%;
+  min-height: 100%;
+  max-width: 60%;
+  margin: 1em auto;
+  padding: 1em 1em;
+  color: #9cbab8;
+  letter-spacing: 1px;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 2em;
 }
 
 
@@ -365,8 +377,8 @@ a:active {
   border: 1px solid black;
   border-radius: 0.2em;
   font-family: 'Raleway', sans-serif;
-      height: 2em;
-    width: 10em;
+  height: 2em;
+  width: 10em;
 }
 
 .button5:hover {
@@ -452,4 +464,31 @@ a:active {
   display: inline-block;
 }
 
+.user-forecasts{
+  text-align: center;
+  background:rgba(50, 50, 50, 0.4);
+  border-radius: 0.4em;
+  box-shadow: 3px 3px 10px black;
+  width: 100%;
+  min-height: 100%;
+  max-width: 40%;
+  margin: 1em auto;
+  padding: 1em 1em;
+  color: #9cbab8;
+  letter-spacing: 1px;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 2em;
+}
+
+#history{
+  text-align: center;
+  background:rgba(50, 50, 50, 0.7);
+  border-radius: 0.5em;
+  box-shadow: 3px 3px 10px black;
+  width: 100%;
+  min-height: 100%;
+  max-width: 70%;
+  margin: 1em auto;
+  padding: 0.25em 0.3em;
+}
 

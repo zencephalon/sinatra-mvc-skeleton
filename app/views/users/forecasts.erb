@@ -1,9 +1,12 @@
-<h1>User forecasts</h1>
-<div class="users">
-  <ul>
-    <% @user.forecasts.each do |forecast| %>
-      <li><%= forecast.country %></li>
+<a class="get-forecast">history</a>
+<div class="user-forecasts">
+<h1><%=@user.username%>'s forecast history</h1><br>
 
-    <% end %>
-  </ul>
+    <%@user.forecasts.each do |forecast|%>
+    <div id='history'>
+      <h3><%=forecast.city%>, <%=forecast.country %></h3>
+      <h3> <%=forecast.created_at.strftime("Created on %m/%d/%Y")%> 
+      </h3><br>
+      </div>
+    <%end%>
 </div>

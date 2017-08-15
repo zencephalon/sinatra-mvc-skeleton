@@ -7,7 +7,7 @@ post '/sessions' do
   @user = User.where(username: params[:username]).first
   if @user && @user.authenticate?(params[:password])
     session[:id] = @user.id
-    redirect '/forecasts/new'
+    redirect "/users/#{@user.id}"
   else
     @errors = []
     @errors << "Incorrect username or password"
@@ -20,3 +20,4 @@ delete '/sessions/:id' do
   session[:id] = nil
   redirect '/'
 end
+

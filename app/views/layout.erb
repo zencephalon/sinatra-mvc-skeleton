@@ -38,7 +38,7 @@
       <a class="right-menu-button" href="/sessions/new">Login</a> 
       <a class="right-menu-button" href="/users/new">Register</a>
       <%else%>
-
+      <a class="right-menu-button" href="/forecasts/new">Forecast</a>
       <a  class="right-menu-button" href="/users/<%=current_user.id%>"><%=current_user.username%>'s profile</a>
       <form id="logout-button" method = "post" action = "/sessions/<%=session[:id]%>">
         <input type= "hidden" name = "_method" value="delete">
