@@ -144,16 +144,17 @@ a:active {
 }
 
 #register-form {
-  margin-top: -20em;
+  margin-top: 9em;
   margin-left: 2em;
   font-family: 'Raleway', sans-serif; 
 }
 
 
 #register-form input {
+   display: inline-block;
   width: 18%;
   padding: 0.7em 1em;
-  margin: 10px 0;
+  margin: 0.5em auto;
   box-sizing: border-box;
   border: 1px solid #ccc;
  /* border-radius: 3em 1em 5em / 0.5em 2em;*/
@@ -168,7 +169,7 @@ a:active {
 
 #registertext{
   text-align: center;
-  background:rgba(50, 50, 50, 0.5);
+  background:rgba(0, 0, 0, 0.3);
   border-radius: 0.4em;
   box-shadow: 3px 3px 10px black;
   width: 70%;
@@ -181,20 +182,20 @@ a:active {
 }
 
 .lasttext{
-  margin-top: 3em;
   text-align: center;
-  background:rgba(0, 0, 0, 0.4);
+  background:rgba(0, 0, 0, 0.2);
   border-radius: 0.4em;
   box-shadow: 3px 3px 10px black;
   width: 100%;
   min-height: 100%;
-  max-width: 60%;
-  margin: 1em auto;
+  max-width: 45%;
+  margin: 4em auto;
   padding: 1em 1em;
   color: #9cbab8;
   letter-spacing: 1px;
   font-family: 'Raleway', sans-serif;
-  margin-bottom: 2em;
+  margin-top: -24em;
+  font-size: 90%;
 }
 
 
@@ -492,3 +493,20 @@ a:active {
   padding: 0.25em 0.3em;
 }
 
+
+#aboutdiv{
+  text-align: center;
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 0.4em;
+  box-shadow: 3px 3px 10px black;
+  width: 100%;
+  min-height: 100%;
+  max-width: 60%;
+  margin: 4em auto;
+  padding: 1em 1em;
+  color: #9cbab8;
+  letter-spacing: 1px;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 2em;
+  font-size: 85%;
+}

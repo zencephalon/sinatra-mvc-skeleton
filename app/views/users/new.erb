@@ -1,11 +1,5 @@
 <a class="get-forecast" href="/forecasts/new">on your phone</a>
 
-<div class='lasttext'>
-<h2 id='registertext'>Register to check weather via sms!</h2>
-<h2 id='registertext'>Get current weather and 5 day forecast for any location!</h2>
-<h2 id='registertext'>Details will be stent to your phone.</h2>
-</div>
-
 
 <form id='register-form' method = "post" action = "/users">
     <input class="input-field" type = "text" name = "user[username]" value="<%=@user.username %>" placeholder="enter username"><br>
@@ -17,6 +11,13 @@
 		<%= erb :'_errors' %>
 		
 </form>
+
+
+<div class='lasttext'>
+<h2 id='registertext'>Register to check weather via sms!</h2>
+<h2 id='registertext'>Get current weather and 5 day forecast for any location!</h2>
+<h2 id='registertext'>Details will be stent to your phone.</h2>
+</div>
 
 <!-- <div class=datetime>
 <div id='clock'>
