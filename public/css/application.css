@@ -28,8 +28,7 @@ body {
 }
 
 .input-field{
-  opacity: 0.5;
-  
+  opacity: 0.5;  
 }
 
 .input-field:focus{
@@ -48,7 +47,6 @@ input {
   border-radius: 0.5em;
   margin-left: 1em;
   outline: none;
-
 }
 
 input:focus {
@@ -84,7 +82,7 @@ a:hover {
 }
 
 a:active {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .errors{
@@ -567,32 +565,6 @@ a:active {
 
 
 
-/*@media screen and (max-width: 800px) {
-  p {
-    font-size: 12px;
- 
-  }
-}
-
-
-@media screen and (max-width: 800px) {
-  h2 {
-    font-size: 15px;
-  }
-}
-
-
-@media screen and (max-width: 800px) {
- main, .fav-site, .sf-art {
-  max-width: 100%;
-
-  }
-}*/
-
-
-
-
-
 
 @media screen and (max-width: 800px) {
   .get-forecast{
@@ -609,7 +581,6 @@ a:active {
     margin: 0 auto;
     padding: 1em 1em;
     margin-bottom: 2em;
- 
   }
 
   #forecast-indexform, #forecast-form{
@@ -667,6 +638,9 @@ a:active {
   #history-form{
     max-width: 90%;
   }
+  #aboutdiv{
+    margin-top: 10em;
+  }
 }
 
 
@@ -697,6 +671,7 @@ a:active {
     min-height: 100%;
     max-width: 90%;
     margin: 1 auto; 
+    margin-top: 0.2em;
   }
 
   .logindatetime{
@@ -739,23 +714,12 @@ a:active {
     display: block;
     width: 100%;
     min-height: 100%;
-    max-width: 90%;
-    
+    max-width: 90%;  
   }
 
-  #register-form input {
-    display: inline-block;
-    width: 90%;
-    padding: 0.7em auto;
-    margin: 0.5em auto;
-    border: 1px solid #ccc;
-    border-radius: 0.5em;
-  }
-
- .lasttext{
-    font-size: 10px;
-    display: inline;
- }
+  #register-form input{
+    width: 80%;
+  } 
 
   #history-form{
     text-align: center;
@@ -787,7 +751,7 @@ a:active {
     font-family: 'Raleway', sans-serif;
   }
 
-    #history-form input{
+  #history-form input{
     text-align: center;
     position: relative;
     width: 100%;
@@ -815,10 +779,38 @@ a:active {
     position: relative;
     font-size: 18px;
     margin-top: -8em;
-    margin-left: 35%;
+    margin-left: 15%;
   }
   .right-menu{
     margin-bottom: 0em;
   }
 
+  .footer{
+    margin-top: 4em;
+  }
+
+  .lasttext{
+    font-size: 10px;
+    display: block;
+    margin-top: 0em;
+    max-width: 85%;
+ }
+  #forecast-container{
+    margin-bottom: 3em;
+  }
+
+  #login-form input{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1em 1em;
+    margin-bottom: 2em;
+    
+  }
 }
+
+
+
