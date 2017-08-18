@@ -3,9 +3,7 @@
 # http://0bc3c31a.ngrok.io -> localhost:9393
 
 post '/inbound' do
-  p params
-  p '$' * 30
-
+ 
   incoming_number = params["From"]
   body = params["Body"]
   array = body.split(',')
@@ -17,6 +15,7 @@ post '/inbound' do
     city = array[0].split.map(&:capitalize).join('_')
     country = array[1].split.map(&:capitalize).join('_')
 
+    # method is in helpers/twilio_helper
     forecast = cast(country, city)
     
     content_type 'text/xml'

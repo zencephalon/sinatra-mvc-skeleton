@@ -68,8 +68,6 @@ end
 #   update_user
 # end
 
-
-#delete
 delete '/users/:id' do
   User.find(params[:id]).destroy!
   session[:id] = nil

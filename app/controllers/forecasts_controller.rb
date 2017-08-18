@@ -7,12 +7,10 @@ get '/forecasts'  do
 end
 
 
-
 get '/forecasts/new' do
   @forecast = Forecast.new
   erb :'/forecasts/new'
 end
-
 
 
 post '/forecasts' do
@@ -25,7 +23,6 @@ post '/forecasts' do
     erb :'/forecasts/new'
   end
 end
-
 
 
 get '/forecasts/:id' do
@@ -44,23 +41,21 @@ get '/forecasts/:id' do
     # auth_token = ''
 
     # set up a client to talk to the Twilio REST API
-    #client = Twilio::REST::Client.new ENV['TWILIO_SID'], ENV['TWILIO_AUTH_TOKEN']
-    #client.account.messages.create({
-    #:from => ENV['WU_phone'],
-    #:to => 4157564007,
+    # client = Twilio::REST::Client.new ENV['TWILIO_SID'], ENV['TWILIO_AUTH_TOKEN']
+    # client.account.messages.create({
+    # :from => ENV['WU_phone'],
+    # :to => 4157564007,
     # :body => "The weather in #{city} is #{@weather}. The temp is #{@temp}, wind: #{@wind}" ,
     #   # :media_url => 'https://climacons.herokuapp.com/clear.png'
     # })
 
     erb :'forecasts/show'
-
   else
     @errors = []
     @errors << 'Invalid city, country or state!'
     erb :'/forecasts/new'
   end
 end
-
 
 
 get '/forecasts/:id/10day' do
@@ -74,20 +69,8 @@ get '/forecasts/:id/10day' do
   @weather_json = @forecast.response_weather(country, city)
   @weather10day_jason = @forecast.forecast_10_day(country, city)
 
-  account_sid = ''
-  auth_token = ''
-
-  # set up a client to talk to the Twilio REST API
-  #client = Twilio::REST::Client.new ENV['TWILIO_SID'], ENV['TWILIO_AUTH_TOKEN']
-  #client.account.messages.create({
-  #:from => ENV['WU_phone'],
-  #:to => 4157564007,
-  #:body => "The weather in #{city} is #{@weather}. The temp is #{@temp}, wind: #{@wind}" ,
-  #   # :media_url => 'https://climacons.herokuapp.com/clear.png'
-  # })
   erb :'forecasts/show10day'
 end
-
 
 
 get '/forecasts/:id/hourly/:location' do
@@ -100,7 +83,6 @@ get '/forecasts/:id/hourly/:location' do
   erb :'forecasts/hourly'
 end
 
-
 get '/forecasts/:id/hourly10day/:location' do
   @forecast = Forecast.find(params[:id])
   @location = params[:location]
@@ -111,7 +93,6 @@ get '/forecasts/:id/hourly10day/:location' do
   erb :'forecasts/hourly10day'
 end
 
-
 get '/forecasts/:id/history/:location' do
   @forecast = Forecast.find(params[:id])
   @location = params[:location]
@@ -120,7 +101,6 @@ get '/forecasts/:id/history/:location' do
   
   erb :'forecasts/history'
 end
-
 
 post '/history/:id/:location' do
   @forecast = Forecast.find(params[:id])
@@ -134,7 +114,7 @@ post '/history/:id/:location' do
   country = (@forecast.country).split.map(&:capitalize).join('_')
   city = (@forecast.city).split.map(&:capitalize).join('_')
   
-   p @history = @forecast.history(country, city, formateddate)
+  @history = @forecast.history(country, city, formateddate)
 
   if @history['history']['dailysummary'] != []
     erb :'forecasts/historydata'
@@ -148,20 +128,18 @@ post '/history/:id/:location' do
 end
 
 
+# get '/forecasts/:id/radar/:location' do
+#   @forecast = Forecast.find(params[:id])
+#   @location = params[:location]
 
-get '/forecasts/:id/radar/:location' do
-  @forecast = Forecast.find(params[:id])
-  @location = params[:location]
 
+#   country = (@forecast.country).split.map(&:capitalize).join('_')
+#   city = (@forecast.city).split.map(&:capitalize).join('_')
 
-  country = (@forecast.country).split.map(&:capitalize).join('_')
-  city = (@forecast.city).split.map(&:capitalize).join('_')
-
-  #@weather_json = @forecast.response_weather(country, city)
-  p '@'* 40
-  p @satellite_radar = @forecast.satellite_radar(country, city)
-  erb :'forecasts/radar'
-end
+#   p '@'* 40
+#   p @satellite_radar = @forecast.satellite_radar(country, city)
+#   erb :'forecasts/radar'
+# end
 
 # #Edit
 # get '/forecasts/:id/edit' do

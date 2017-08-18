@@ -36,7 +36,6 @@ body {
   opacity: 0.6;
 }
 
-
 input {
   width: 25%;
   padding: 0.7em 1em;
@@ -89,14 +88,10 @@ a:active {
   color:  #ffd100;
 }
 
-#forecastbutton{ 
-}
-
 #forecastbutton:hover{
   color: #006881;
   border: 1px solid black;
 }
-
 
 #forecast-form, #forecast-indexform{
   text-align: center;
@@ -105,7 +100,6 @@ a:active {
   min-height: 100%;
   max-width: 55%;
   margin: 0em auto;
-  /*padding: 1em 1em;*/
   background:rgba(0, 0, 0, 0.3);
   border-radius: 0.5em;
   box-shadow: 5px 5px 20px black;
@@ -117,7 +111,6 @@ a:active {
   margin-top: 17%; 
 }
 
-
 #login-form {
   margin-top:10em;
   margin-left: 2em;
@@ -127,7 +120,6 @@ a:active {
 #login-form input:focus {
   border: 1px solid black;
 }
-
 
 #login-form input {
   width: 18%;
@@ -146,7 +138,6 @@ a:active {
   margin-left: 2em;
   font-family: 'Raleway', sans-serif; 
 }
-
 
 #register-form input {
    display: inline-block;
@@ -220,7 +211,6 @@ a:active {
   border-radius: 0.15em;
 }
 
-
 .get-forecast{
   display: inline-block;
   margin-left: 9.3em;
@@ -232,7 +222,6 @@ a:active {
   color: #9cbab8;
   padding: 0.2em;
   font-size: 0.8em;
-
 }
 
 #clock {
@@ -257,7 +246,6 @@ a:active {
   margin-top: 15%;
 }
 
-
 .logindatetime{
   text-align: center;
   position: relative;
@@ -269,8 +257,6 @@ a:active {
   box-shadow: 5px 5px 20px black;
   margin-top: -10%;
 }
-
-
 
 .icon {
   background-color: white;
@@ -292,7 +278,6 @@ a:active {
   color: #9cbab8;
   padding: 0.2em;
 }
-
 
 #location:hover:before {
   content: 'Replace ';  
@@ -385,7 +370,6 @@ a:active {
   color: black;
 }
 
-
 #myBtn {
   display: none;
   position: fixed;
@@ -415,7 +399,6 @@ a:active {
   color: white;
 } 
 
-
 .demo {
   margin: 0 auto;
   padding-bottom: 1.4em;
@@ -444,7 +427,6 @@ a:active {
   font-size: 0.8em;
 }
 
-
 .about:hover {
   display: inline;
   background-color: white;
@@ -457,7 +439,6 @@ a:active {
   padding-right: 1em;
   font-size: 0.8em;
 }
-
 
 #logout-button{
   display: inline-block;
@@ -491,7 +472,6 @@ a:active {
   padding: 0.25em 0.3em;
 }
 
-
 #aboutdiv{
   text-align: center;
   background:rgba(0, 0, 0, 0.2);
@@ -509,7 +489,6 @@ a:active {
   font-size: 85%;
 }
 
-
 #history-form{
   text-align: center;
   position: relative;
@@ -517,7 +496,6 @@ a:active {
   min-height: 100%;
   max-width: 55%;
   margin: 0em auto;
-  /*padding: 1em 1em;*/
   background:rgba(0, 0, 0, 0.3);
   border-radius: 0.5em;
   box-shadow: 5px 5px 20px black;
@@ -525,12 +503,10 @@ a:active {
   font-family: 'Raleway', sans-serif;
 }
 
-
 #historydiv{
   text-align: center;
   background:rgba(0, 0, 0, 0);
   border-radius: 0.4em;
- /* box-shadow: 3px 3px 10px black;*/
   width: 100%;
   min-height: 100%;
   max-width: 40%;
@@ -564,13 +540,12 @@ a:active {
 }
 
 
-
-
 @media screen and (max-width: 800px) {
   .get-forecast{
     display: none;
   }
- .right-menu{
+
+  .right-menu{
     display: block;
     font-size: 30px;
     text-align: center;
@@ -638,6 +613,7 @@ a:active {
   #history-form{
     max-width: 90%;
   }
+
   #aboutdiv{
     margin-top: 10em;
   }
@@ -646,10 +622,11 @@ a:active {
 
 
 @media screen and (max-width: 600px) {
-
+  
   .get-forecast{
     display: none;
   }
+
   .right-menu{
     display: block;
     font-size: 20px;
@@ -662,6 +639,7 @@ a:active {
     padding: 1em 1em;
     margin-bottom: 2em;
   }
+
   .logo{
     display: block;
     font-size: 40px;
@@ -692,6 +670,7 @@ a:active {
     padding: 0.5em 0.5em;
     margin-top: 10em;
   }
+
   #forecast-indexform input{
     display: block;
     width: 100%;
@@ -728,7 +707,6 @@ a:active {
     min-height: 100%;
     max-width: 90%;
     margin: 0em auto;
-    /*padding: 1em 1em;*/
     background:rgba(0, 0, 0, 0.3);
     border-radius: 0.5em;
     box-shadow: 5px 5px 20px black;
@@ -747,7 +725,7 @@ a:active {
     background:rgba(0, 0, 0, 0.3);
     border-radius: 0.5em;
     box-shadow: 5px 5px 20px black;
-    margin-top: 6em;
+    margin-top: 9em;
     font-family: 'Raleway', sans-serif;
   }
 
@@ -781,6 +759,7 @@ a:active {
     margin-top: -8em;
     margin-left: 15%;
   }
+
   .right-menu{
     margin-bottom: 0em;
   }
@@ -794,7 +773,8 @@ a:active {
     display: block;
     margin-top: 0em;
     max-width: 85%;
- }
+  }
+
   #forecast-container{
     margin-bottom: 3em;
   }
@@ -807,8 +787,7 @@ a:active {
     max-width: 90%;
     margin: 0 auto;
     padding: 1em 1em;
-    margin-bottom: 2em;
-    
+    margin-bottom: 2em;  
   }
 }
 
