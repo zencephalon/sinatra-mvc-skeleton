@@ -589,15 +589,33 @@ a:active {
   }
 }*/
 
+
+
+
+
+
 @media screen and (max-width: 800px) {
- .right-menu{
-  display: block;
- font-size: 30px;
+  .get-forecast{
+    display: none;
   }
+ .right-menu{
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1em 1em;
+    margin-bottom: 2em;
+ 
+  }
+
   #forecast-indexform, #forecast-form{
     width: 100%;
-  min-height: 100%;
-  max-width: 95%;
+    min-height: 100%;
+    max-width: 95%;
   }
 
   .lasttext{
@@ -605,31 +623,202 @@ a:active {
   }
 
   #register-form input{
-  margin-right: 6px;
-  width: 40%;
+    margin-right: 6px;
+    width: 40%;
   } 
 
   #forecast-form{
-  margin-top: 40%;
+    margin-top: 40%;
   } 
 
   #login-form input{
-  text-align: center;
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  max-width: 60%;
-  margin: 0 auto;
-  padding: 1em 1em;
-  margin-bottom: 2em;
-  margin-left: 18%;
-
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 1em 1em;
+    margin-bottom: 2em;
+    margin-left: 18%;
   } 
 
   .logindatetime{
     margin-top:5em;
   }
+
   #forecast-container{
     margin-bottom: 1em;
   }
+
+  .userprofile{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 1em 1em;
+    margin-bottom: 2em;
+    margin-left: 18%;
+    margin-top: 10em;
+  }
+
+  #history-form{
+    max-width: 90%;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+  .get-forecast{
+    display: none;
+  }
+  .right-menu{
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 90%;
+    margin: 1 auto;
+    padding: 1em 1em;
+    margin-bottom: 2em;
+  }
+  .logo{
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 90%;
+    margin: 1 auto; 
+  }
+
+  .logindatetime{
+    display: none;
+  }
+
+  .datetime{
+    display: none;
+  }
+
+  #forecast-indexform{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0.5em 0.5em;
+    margin-top: 10em;
+  }
+  #forecast-indexform input{
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    max-width: 90%;
+  }
+
+  #forecast-form{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0.5em 0.5em;
+    margin-top: 10em;
+  }
+
+  #forecast-form input{
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    max-width: 90%;
+    
+  }
+
+  #register-form input {
+    display: inline-block;
+    width: 90%;
+    padding: 0.7em auto;
+    margin: 0.5em auto;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+  }
+
+ .lasttext{
+    font-size: 10px;
+    display: inline;
+ }
+
+  #history-form{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 90%;
+    margin: 0em auto;
+    /*padding: 1em 1em;*/
+    background:rgba(0, 0, 0, 0.3);
+    border-radius: 0.5em;
+    box-shadow: 5px 5px 20px black;
+    margin-top: 0%;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  #history-form{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 80%;
+    margin: 0em auto;
+    padding: 1em 1em;
+    background:rgba(0, 0, 0, 0.3);
+    border-radius: 0.5em;
+    box-shadow: 5px 5px 20px black;
+    margin-top: 6em;
+    font-family: 'Raleway', sans-serif;
+  }
+
+    #history-form input{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 90%;
+    margin: 0em auto;
+    background:rgba(1, 1, 1, 0.2);
+    border-radius: 0.5em;
+    box-shadow: 5px 5px 20px black;
+    margin-top: 0%;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+  }
+
+  #historydiv{
+    margin-top: 0em;
+    width: 100%;
+    min-height: 100%;
+    max-width: 90%;
+    font-size: 10px;
+  }
+
+  #location{
+    text-align: center;
+    position: relative;
+    font-size: 18px;
+    margin-top: -8em;
+    margin-left: 35%;
+  }
+  .right-menu{
+    margin-bottom: 0em;
+  }
+
 }
