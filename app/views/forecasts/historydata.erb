@@ -1,0 +1,76 @@
+<%if @forecast%>
+
+<h2><a href="/forecasts/new"><mark id='location'><%=@location%></mark></a></h2>
+
+<div class="menu">
+  <a href="/forecasts/<%=@forecast.id%>"><h3 id='tendaylink'>5 Day Weather</h3></a>||
+
+  <a href="/forecasts/<%=@forecast.id%>/10day"><h3 id='tendaylink'>10 Day Weather</h3></a>||
+
+  <a href="/forecasts/<%=@forecast.id%>/hourly10day/<%=@location%>"><h3 id='tendaylink'>Hourly 10 day Forecast</h3></a> ||
+
+
+  <a href="/forecasts/<%=@forecast.id%>/history/<%=@location%>"><h3 id='tendaylink'>History</h3></a> ||
+
+  <a href="/forecasts/<%=@forecast.id%>/radar/<%=@location%>"><h3 id='tendaylink'>Radar</h3></a> ||
+  <a href="/forecasts/<%=@forecast.id%>/hourly10day/<%=@location%>"><h3 id='tendaylink'>Satellite</h3></a>
+
+</div>
+
+
+
+<div id='history-container'>
+  <div class="history">
+    <h3>Weather for <%=@location%></h3>
+    <h3> on <%=@date%></h3>
+    <div class='icon'>
+
+
+      <p> Max Temperature: <%=@history['history']['dailysummary'][0]['maxtempm']%> ℃</p>
+      <%=@history['history']['dailysummary'][0]['maxtempi']%> F 
+      <p> Min Temperature: <%=@history['history']['dailysummary'][0]['mintempm']%> ℃</p>
+      <%=@history['history']['dailysummary'][0]['mintempi']%> F
+      <p>Max Wind Speed: <%=@history['history']['dailysummary'][0]['maxwspdm']%> km/h</p>
+      <%=@history['history']['dailysummary'][0]['maxwspdi']%> mph
+      <p>Min Wind Speed: <%=@history['history']['dailysummary'][0]['minwspdm']%> km/h</p>
+      <%=@history['history']['dailysummary'][0]['minwspdi']%> mph
+      <p>Max Humidity: <%=@history['history']['dailysummary'][0]['maxhumidity']%> %</p>
+      <p>Min Humidity: <%=@history['history']['dailysummary'][0]['minhumidity']%> %</p>
+
+
+
+    </div>
+  </div>
+
+  <div class='history'>
+    <div class='icon'>
+      <p>Fog: <%=@history['history']['dailysummary'][0]['fog']%></p>
+      <p>Rain: <%=@history['history']['dailysummary'][0]['rain']%></p>
+      <p>Snow: <%=@history['history']['dailysummary'][0]['snow']%></p>
+  
+
+      <div class='history'>
+        <div class='icon'>
+          <p>Hail: <%=@history['history']['dailysummary'][0]['hail']%></p>
+          <p>Thunder: <%=@history['history']['dailysummary'][0]['thunder']%></p>
+          <p>Tornado: <%=@history['history']['dailysummary'][0]['tornado']%></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%end%>
+
+
+
+
+
+
+
+
+
+
+
+

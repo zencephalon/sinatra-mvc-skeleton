@@ -1,0 +1,16 @@
+
+<h2><a href="/forecasts/new"><mark id='location'><%=@location%></mark></a></h2>
+
+<div id="historydiv">
+<h2 id='registertext'>Get data up to 30 years back.</h2>
+</div>
+
+<form id='history-form' method = "post" action="/history/<%=@forecast.id%>/<%=@location%>">
+<input type="text" id="datepicker" name="date" placeholder="mm/dd/yyyy">
+<input id="forecastbutton" type = "submit", value = "get data">
+<%= erb :'_errors' %>
+</form>
+
+
+
+

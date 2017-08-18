@@ -65,7 +65,7 @@ end
 
 get '/forecasts/:id/10day' do
   @forecast = Forecast.find(params[:id])
-    
+
   country = (@forecast.country).split.map(&:capitalize).join('_')
   city = (@forecast.city).split.map(&:capitalize).join('_')
   # @city = (@forecast.city).split.map(&:capitalize).join(' ')
@@ -91,29 +91,11 @@ end
 
 
 get '/forecasts/:id/hourly/:location' do
-
   @forecast = Forecast.find(params[:id])
   @location = params[:location]  
-
   country = (@forecast.country).split.map(&:capitalize).join('_')
   city = (@forecast.city).split.map(&:capitalize).join('_')
-
-  #@weather_json = @forecast.response_weather(country, city)
   @weather_hourly = @forecast.hourly(country, city)
-
-  # p @weekday = @weather_hourly['hourly_forecast'][0]['FCTTIME']['weekday_name']
-  # p @day = @weather_hourly['hourly_forecast'][0]['FCTTIME']['mday']
-  # p @month = @weather_hourly['hourly_forecast'][0]['FCTTIME']['mon']
-  # p @year = @weather_hourly['hourly_forecast'][0]['FCTTIME']['year']
-  # p @hour = @weather_hourly['hourly_forecast'][0]['FCTTIME']['civil']
-
-  # p @icon = @weather_hourly['hourly_forecast'][0]['icon_url']
-  # p @condition = @weather_hourly['hourly_forecast'][0]['condition']
-  # p @temp_c = @weather_hourly['hourly_forecast'][0]['temp']['metric']
-  # p @temp_f = @weather_hourly['hourly_forecast'][0]['temp']['english']
-  # p @humidity = @weather_hourly['hourly_forecast'][0]['humidity']
-  # p @wind_metric = @weather_hourly['hourly_forecast'][0]['wspd']['metric']
-  # p @wind_english = @weather_hourly['hourly_forecast'][0]['wspd']['english']
 
   erb :'forecasts/hourly'
 end
@@ -122,17 +104,64 @@ end
 get '/forecasts/:id/hourly10day/:location' do
   @forecast = Forecast.find(params[:id])
   @location = params[:location]
-  
-
   country = (@forecast.country).split.map(&:capitalize).join('_')
-  city = (@forecast.city).split.map(&:capitalize).join('_')
-  
-  #@weather_json = @forecast.response_weather(country, city)
+  city = (@forecast.city).split.map(&:capitalize).join('_') 
   @weather_hourly = @forecast.hourly10day(country, city)
 
   erb :'forecasts/hourly10day'
 end
 
+
+get '/forecasts/:id/history/:location' do
+  @forecast = Forecast.find(params[:id])
+  @location = params[:location]
+  country = (@forecast.country).split.map(&:capitalize).join('_')
+  city = (@forecast.city).split.map(&:capitalize).join('_')
+  
+  erb :'forecasts/history'
+end
+
+
+post '/history/:id/:location' do
+  @forecast = Forecast.find(params[:id])
+  @location = params[:location]
+  @date = params[:date]
+  d = @date.split('/')
+  new = []
+  new << d[2] << d[0] << d[1]
+  formateddate = new.join.to_i
+
+  country = (@forecast.country).split.map(&:capitalize).join('_')
+  city = (@forecast.city).split.map(&:capitalize).join('_')
+  
+   p @history = @forecast.history(country, city, formateddate)
+
+  if @history['history']['dailysummary'] != []
+    erb :'forecasts/historydata'
+  else
+   @errors = []
+   @errors << 'No information for selected dates!'
+   @errors << 'Try more recent one!'
+   erb :'forecasts/history'
+  end
+
+end
+
+
+
+get '/forecasts/:id/radar/:location' do
+  @forecast = Forecast.find(params[:id])
+  @location = params[:location]
+
+
+  country = (@forecast.country).split.map(&:capitalize).join('_')
+  city = (@forecast.city).split.map(&:capitalize).join('_')
+
+  #@weather_json = @forecast.response_weather(country, city)
+  p '@'* 40
+  p @satellite_radar = @forecast.satellite_radar(country, city)
+  erb :'forecasts/radar'
+end
 
 # #Edit
 # get '/forecasts/:id/edit' do

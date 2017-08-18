@@ -20,8 +20,12 @@ class Forecast < ActiveRecord::Base
     hourly = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/hourly10day/q/#{country}/#{city}.json")
   end
 
- def history(country, city)
-    history = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/history_20060405/q/#{country}/#{city}.json")
+ def history(country, city, date)
+    history = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/history_#{date}/q/#{country}/#{city}.json")
+  end
+
+  def radar(country, city)
+    radar = HTTParty.get("http://api.wunderground.com/api/#{ENV['WU_API']}/radar/q/#{country}/#{city}.gif?width=280&height=280&newmaps=1")
   end
 
   def satellite_radar(country, city)

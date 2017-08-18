@@ -510,3 +510,126 @@ a:active {
   margin-bottom: 2em;
   font-size: 85%;
 }
+
+
+#history-form{
+  text-align: center;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  max-width: 55%;
+  margin: 0em auto;
+  /*padding: 1em 1em;*/
+  background:rgba(0, 0, 0, 0.3);
+  border-radius: 0.5em;
+  box-shadow: 5px 5px 20px black;
+  margin-top: 0%;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+#historydiv{
+  text-align: center;
+  background:rgba(0, 0, 0, 0);
+  border-radius: 0.4em;
+ /* box-shadow: 3px 3px 10px black;*/
+  width: 100%;
+  min-height: 100%;
+  max-width: 40%;
+  margin: 5em auto;
+  padding: 0.5em 0.5em;
+  color: #9cbab8;
+  letter-spacing: 0.5px;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 0em;
+  font-size: 90%;
+}
+
+#history-container {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1em 1em;
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 0.6em;
+  box-shadow: 5px 5px 20px black;
+  margin-bottom: 2em;
+}
+
+.history {
+  display: inline-block;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+
+
+/*@media screen and (max-width: 800px) {
+  p {
+    font-size: 12px;
+ 
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 15px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+ main, .fav-site, .sf-art {
+  max-width: 100%;
+
+  }
+}*/
+
+@media screen and (max-width: 800px) {
+ .right-menu{
+  display: block;
+ font-size: 30px;
+  }
+  #forecast-indexform, #forecast-form{
+    width: 100%;
+  min-height: 100%;
+  max-width: 95%;
+  }
+
+  .lasttext{
+    margin-right: 20px;
+  }
+
+  #register-form input{
+  margin-right: 6px;
+  width: 40%;
+  } 
+
+  #forecast-form{
+  margin-top: 40%;
+  } 
+
+  #login-form input{
+  text-align: center;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 1em 1em;
+  margin-bottom: 2em;
+  margin-left: 18%;
+
+  } 
+
+  .logindatetime{
+    margin-top:5em;
+  }
+  #forecast-container{
+    margin-bottom: 1em;
+  }
+}
