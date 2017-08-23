@@ -34,6 +34,8 @@ get '/forecasts/:id' do
   # @country = (@forecast.country).split.map(&:capitalize).join(' ')
   @weather_json = @forecast.response_weather(country, city)
   @weather10day_jason = @forecast.forecast_10_day(country, city)
+
+   @location = @weather_json['current_observation']['display_location']['full']
   
   if @weather_json['response']['error'] == nil && @weather_json['current_observation'] != nil && @weather_json['current_observation']['display_location'] != nil
 
@@ -48,7 +50,6 @@ get '/forecasts/:id' do
     # :body => "The weather in #{city} is #{@weather}. The temp is #{@temp}, wind: #{@wind}" ,
     #   # :media_url => 'https://climacons.herokuapp.com/clear.png'
     # })
-
     erb :'forecasts/show'
   else
     @errors = []
@@ -68,18 +69,20 @@ get '/forecasts/:id/10day' do
 
   @weather_json = @forecast.response_weather(country, city)
   @weather10day_jason = @forecast.forecast_10_day(country, city)
+  @location = @weather_json['current_observation']['display_location']['full']
 
   erb :'forecasts/show10day'
 end
 
 
 get '/forecasts/:id/hourly/:location' do
+
   @forecast = Forecast.find(params[:id])
   @location = params[:location]  
   country = (@forecast.country).split.map(&:capitalize).join('_')
   city = (@forecast.city).split.map(&:capitalize).join('_')
   @weather_hourly = @forecast.hourly(country, city)
-
+ 
   erb :'forecasts/hourly'
 end
 

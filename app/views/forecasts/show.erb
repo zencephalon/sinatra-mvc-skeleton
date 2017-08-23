@@ -5,24 +5,12 @@
 
 <!-- <a class="changelocation" href="/forecasts/new">change location</a> -->
 
-<h2><a href="/forecasts/new"><mark id='location'><%=@weather_json['current_observation']['display_location']['full']%></mark></a></h2>
+<h2><a href="/forecasts/new"><mark id='location'><%=@location%></mark></a></h2>
 
 
 
-  <div class="menu">
+  <%=erb :'_menu'%>
 
-    <a href="/forecasts/<%=@forecast.id%>/10day"><h3 id='tendaylink'>10 Day Forecast</h3></a>|| 
-
-    <a href="/forecasts/<%=@forecast.id%>/hourly/<%=@weather_json['current_observation']['display_location']['full']%>"><h3 id='tendaylink'>Hourly Forecast</h3></a> ||  
-
-    <a href="/forecasts/<%=@forecast.id%>/hourly10day/<%=@weather_json['current_observation']['display_location']['full']%>"><h3 id='tendaylink'>Hourly 10 day Forecast</h3></a> ||
-
-    <a href="/forecasts/<%=@forecast.id%>/history/<%=@weather_json['current_observation']['display_location']['full']%>"><h3 id='tendaylink'>History</h3></a> 
-
-   <!--   <a href="/forecasts/<%=@forecast.id%>/radar/<%=@weather_json['current_observation']['display_location']['full']%>"><h3 id='tendaylink'>Radar</h3></a> ||
-     
-     <a href="/forecasts/<%=@forecast.id%>/hourly10day/<%=@weather_json['current_observation']['display_location']['full']%>"><h3 id='tendaylink'>Satellite</h3></a> -->
-  </div>
 
 
 <div id='forecast-container'>
