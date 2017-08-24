@@ -320,7 +320,9 @@ a:active {
 } 
 
 .active {
-  background-color: green;
+  background-color:#006881;
+   
+  border: 1px solid black;
 }
  
 .menu{

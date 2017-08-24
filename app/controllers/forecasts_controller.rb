@@ -34,11 +34,11 @@ get '/forecasts/:id' do
   # @country = (@forecast.country).split.map(&:capitalize).join(' ')
   @weather_json = @forecast.response_weather(country, city)
   @weather10day_jason = @forecast.forecast_10_day(country, city)
-
-   @location = @weather_json['current_observation']['display_location']['full']
-  
+  @activeclass1 = true
+   
   if @weather_json['response']['error'] == nil && @weather_json['current_observation'] != nil && @weather_json['current_observation']['display_location'] != nil
 
+  @location = @weather_json['current_observation']['display_location']['full']
     # account_sid = ''
     # auth_token = ''
 
@@ -70,6 +70,7 @@ get '/forecasts/:id/10day' do
   @weather_json = @forecast.response_weather(country, city)
   @weather10day_jason = @forecast.forecast_10_day(country, city)
   @location = @weather_json['current_observation']['display_location']['full']
+  @activeclass2 = true
 
   erb :'forecasts/show10day'
 end
@@ -82,7 +83,7 @@ get '/forecasts/:id/hourly/:location' do
   country = (@forecast.country).split.map(&:capitalize).join('_')
   city = (@forecast.city).split.map(&:capitalize).join('_')
   @weather_hourly = @forecast.hourly(country, city)
- 
+  @activeclass3 = true
   erb :'forecasts/hourly'
 end
 
@@ -92,7 +93,7 @@ get '/forecasts/:id/hourly10day/:location' do
   country = (@forecast.country).split.map(&:capitalize).join('_')
   city = (@forecast.city).split.map(&:capitalize).join('_') 
   @weather_hourly = @forecast.hourly10day(country, city)
-
+  @activeclass4 = true
   erb :'forecasts/hourly10day'
 end
 
@@ -101,7 +102,7 @@ get '/forecasts/:id/history/:location' do
   @location = params[:location]
   country = (@forecast.country).split.map(&:capitalize).join('_')
   city = (@forecast.city).split.map(&:capitalize).join('_')
-  
+  @activeclass5 = true
   erb :'forecasts/history'
 end
 
@@ -118,7 +119,8 @@ post '/history/:id/:location' do
   city = (@forecast.city).split.map(&:capitalize).join('_')
   
   @history = @forecast.history(country, city, formateddate)
-
+  @activeclass5 = true
+  
   if @history['history']['dailysummary'] != []
     erb :'forecasts/historydata'
   else

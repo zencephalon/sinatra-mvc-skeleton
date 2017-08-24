@@ -1,11 +1,38 @@
-$(document).ready(function(){
 
-    $(document).ready(function(){
-  $('ul li a').click(function(){
-    $('li a').removeClass("active");
-    $(this).addClass("active");
-});
-});
+
+// $(document).ready(function () {
+//   $('.menu a').on("click", function(e){
+//     e.preventDefault();
+//     console.log(this)
+
+//     $('.menu a').removeClass('active');
+//     $(this).addClass('active');
+//   });
+
+
+  // $('.tenday').on("click", function(e){
+  //   e.preventDefault();
+
+  //   url = href
+  //   $.ajax({
+  //     url: "api/forecasts/<%=@forecast.id%>/10day"  
+  //     method: GET
+  //   })
+  //   .done(function(response){
+  //   
+
+  //   })
+
+
+
+  //    $('#forecast-container').fadeOut(500);
+  //   $('.10day').fadeIn();
+  // });
+// @@
+
+
+
+$(document).ready(function(){
 
 startTime();
 
