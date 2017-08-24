@@ -321,9 +321,20 @@ a:active {
 
 .active {
   background-color:#006881;
-   
-  border: 1px solid black;
+  padding:5px;
+  border-radius: 0.2em;
+opacity: 0.80;
 }
+
+.forecastdate{
+  border-radius: 0.2em;
+  opacity: 0.35;
+  background-color: black;
+  color: #9cbab8;
+  padding: 3px;
+  font-family: 'Raleway', sans-serif;
+}
+
  
 .menu{
   text-align: center;
