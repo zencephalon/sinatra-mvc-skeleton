@@ -81,7 +81,7 @@ function topFunction() {
 }
 
 $( function() {
-    $( "#datepicker" ).datepicker({ minDate: "-3Y", maxDate: "-1D" });
+    $( "#datepicker" ).datepicker({ minDate: "-30Y", maxDate: "-1D" });
 });
 
 

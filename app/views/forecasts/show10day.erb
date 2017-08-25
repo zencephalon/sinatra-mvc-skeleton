@@ -9,7 +9,7 @@
   <div id='forecast-container' class='10day'>
 
     <div class="forecast">
-      <h3>Current Weather</h3>
+      <h3><mark class='forecastdate'>Current Weather</mark></h3>
       <div class='icon'>
         <img src=<%=@weather_json['current_observation']['icon_url']%>>
         <p><%=@weather_json['current_observation']['weather']%></p>
@@ -25,7 +25,7 @@
     <%(0..9).each do |number|%>
     
     <div class="forecast">
-      <h3><%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['date']['weekday']%> <%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['date']['month']%>.<%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['date']['day']%>.<%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['date']['year']%></h3>
+      <h3><mark class='forecastdate'><%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['date']['weekday']%> <%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['date']['month']%>.<%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['date']['day']%>.<%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['date']['year']%></mark></h3>
       <div class='icon'>
         <img src=<%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['icon_url']%>>
         <p><%=@weather10day_jason['forecast']['simpleforecast']['forecastday'][number]['conditions']%></p>

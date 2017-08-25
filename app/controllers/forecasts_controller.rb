@@ -117,7 +117,9 @@ post '/history/:id/:location' do
 
   country = (@forecast.country).split.map(&:capitalize).join('_')
   city = (@forecast.city).split.map(&:capitalize).join('_')
-  
+    
+  p '#' * 10
+
   @history = @forecast.history(country, city, formateddate)
   @activeclass5 = true
   

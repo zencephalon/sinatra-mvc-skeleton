@@ -12,7 +12,7 @@
     <%(0..34).each do |number|%>
     
     <div class="forecast">
-      <h3><%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['weekday_name']%> <%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['mon']%>.<%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['mday']%>.<%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['year']%></h3>
+      <h3><mark class='forecastdate'><%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['weekday_name']%> <%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['mon']%>.<%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['mday']%>.<%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['year']%></mark></h3>
       <div class='icon'>
         <h3><%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['civil']%></h3>
         <img src=<%=@weather_hourly['hourly_forecast'][number]['icon_url']%>>

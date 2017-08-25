@@ -323,7 +323,7 @@ a:active {
   background-color:#006881;
   padding:5px;
   border-radius: 0.2em;
-opacity: 0.80;
+  opacity: 0.80;
 }
 
 .forecastdate{
@@ -564,6 +564,12 @@ opacity: 0.80;
   color: #9cbab8;
   font-size: 1.2em;
   font-family: 'Raleway', sans-serif;
+  background:rgba(0, 0, 0, 0.2);
+  border-radius: 0.3em;
+  padding-top: 5px;
+  padding-right: 2px;
+  padding-left: 2px;
+  margin-bottom: 1em;
 }
 
 
@@ -755,8 +761,7 @@ opacity: 0.80;
     box-shadow: 5px 5px 20px black;
     margin-top: 0%;
     font-family: 'Raleway', sans-serif;
-    color: white;
-    
+    color: white; 
   }
 
   #historydiv{
@@ -764,8 +769,7 @@ opacity: 0.80;
     width: 100%;
     min-height: 100%;
     max-width: 90%;
-    font-size: 10px;
-    
+    font-size: 10px; 
   }
 
   #location{

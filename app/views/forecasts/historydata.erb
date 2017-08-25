@@ -8,9 +8,10 @@
 <div id='history-container'>
   <div class="history">
     <div id='history-text'
-      <h2>Weather for <%=@location%></h2>
-      <h3> on <%=@date%></h3>
-    </div>
+    <h2><%=@location%></h2>
+    <h3> on <%=@date%></h3>
+  </div>
+
   <div class='icon'>
 
     <p> Max Temperature: <%=@history['history']['dailysummary'][0]['maxtempm']%> ℃</p>
