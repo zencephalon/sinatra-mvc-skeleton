@@ -23,13 +23,18 @@ Upon opening the application users can directly check forecast for any city or r
 </p>
 
 <p align="center">
+<img src="/screenshots/midviewoftenday.png">
+  Mid view of ten day forecast.  
+</p> 
+
+<p align="center">
 <img src="/screenshots/historyform.png">
   Form to check history.  
 </p>
 
 <p align="center">
 <img src="/screenshots/historyinfo.png">
-  History info for the day selected.  
+  History info for the date selected.  
 </p>
 
 <p align="center">
