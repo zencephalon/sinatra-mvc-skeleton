@@ -14,7 +14,6 @@ gem 'httparty'
 gem 'twilio-ruby'
 gem 'dotenv'
 
-
 gem 'rake'
 
 gem 'shotgun'
