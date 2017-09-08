@@ -4,20 +4,20 @@
 	<h1><%= @user.username%>'s profile: </h1>
 	<h2>You signed up with email: <%= @user.email%> </h2>
 	<h2>Phone number: <%= @user.phone_number%> </h2>
-	</div>
-
-		<a href="/users/<%=@user.id %>/forecasts"><button class="button5">Search history</button></a>
-	<br><br>
-	<a href="/users/<%=@user.id %>/edit"><button class="button5">Edit</button></a>
-	<br>
-	<br>
-
-  <form method = "post" action = "/users/<%=@user.id %>">
-    <input type= "hidden" name = "_method" value="delete">
-    <button class="button5 type = "submit"> Delete!</button>
-  </form>
-
 </div>
+
+<a href="/users/<%=@user.id %>/forecasts"><button class="button5">Search history</button></a>
+<br><br>
+<a href="/users/<%=@user.id %>/edit"><button class="button5">Edit</button></a>
+<br>
+<br>
+
+<form method = "post" action = "/users/<%=@user.id %>">
+	<input type= "hidden" name = "_method" value="delete">
+	<button Onclick="return ConfirmDelete();" class="button5 type = "submit"> Delete!</button>
+</form>
+
+
 
 
 
