@@ -1,17 +1,17 @@
 <a class="get-forecast" href="/forecasts/new">SMS forecast</a>
 <br>
 <form id='login-form' action = "/sessions" method = "post">
-  <input class="input-field" type = "text" name = "username" placeholder="Username">
-  <br>
-  <input class="input-field" type = "password" name = "password" placeholder="Password">
-  <br>
-  <input id="forecastbutton" type = "submit", value = "Login">
-<%= erb :'_errors' %>
+	<input class="input-field" type = "text" name = "username" placeholder="Username">
+	<br>
+	<input class="input-field" type = "password" name = "password" placeholder="Password">
+	<br>
+	<input id="forecastbutton" type = "submit", value = "Login">
+	<%= erb :'_errors' %>
 </form>
 
 <div class=logindatetime>
-<div id='clock'>
-</div>
-<div id='date'>
-</div>
+	<div id='clock'>
+	</div>
+	<div id='date'>
+	</div>
 </div>

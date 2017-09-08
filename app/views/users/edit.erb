@@ -1,6 +1,6 @@
 <h2 id=editheadline>Edit profile</h2>
 <div class = 'a'>
-<form id='edit-form' method="post" action="/users/<%= @user.id %>">
+  <form id='edit-form' method="post" action="/users/<%= @user.id %>">
     <input type="hidden" name="_method" value="put" />
 
     <label for="username">username:</label><br>
@@ -17,12 +17,12 @@
 
     <input type="submit" value="Edit User" class="button">
     <%= erb :'_errors' %>
-</form>
+  </form>
 </div>
 
 <div class=datetime>
-<div id='clock'>
-</div>
-<div id='date'>
-</div>
+  <div id='clock'>
+  </div>
+  <div id='date'>
+  </div>
 </div>

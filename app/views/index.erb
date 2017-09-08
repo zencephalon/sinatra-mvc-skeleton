@@ -1,10 +1,10 @@
 <a class="get-forecast">SMS on your phone</a>
 
 <div class=datetime>
-<div id='clock'>
-</div>
-<div id='date'>
-</div>
+	<div id='clock'>
+	</div>
+	<div id='date'>
+	</div>
 </div>
 
 <form id="forecast-indexform" action="/forecasts" method = "post">
@@ -12,11 +12,11 @@
 	<input class="input-field" type = "text" name = "forecast[country]" value="<%=@forecast.country%>"  placeholder="country or state">
 
 	<%if session[:id]%>
-	 <input type="hidden" name="forecast[user_id]" value="<%=session[:id]%>">
-	 <%end%>
-	 
+	<input type="hidden" name="forecast[user_id]" value="<%=session[:id]%>">
+	<%end%>
+	
 	<input type = "submit" id='forecastbutton', value = "forecast">
-<%= erb :'_errors' %>
+	<%= erb :'_errors' %>
 </form>
 
 

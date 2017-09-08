@@ -1,31 +1,31 @@
 <div class="menu">
-<%if @activeclass1 %>
-	<a class='active' href="/forecasts/<%=@forecast.id%>"><h3 id='tendaylink'>5 Day Forecast</h3></a>||
-<%else%>
-	<a href="/forecasts/<%=@forecast.id%>"><h3 id='tendaylink'>5 Day Forecast</h3></a>||
-<%end%>
+  <%if @activeclass1 %>
+  <a class='active' href="/forecasts/<%=@forecast.id%>"><h3 id='tendaylink'>5 Day Forecast</h3></a>||
+  <%else%>
+  <a href="/forecasts/<%=@forecast.id%>"><h3 id='tendaylink'>5 Day Forecast</h3></a>||
+  <%end%>
 
-<%if @activeclass2%>
-	<a class='active' href="/forecasts/<%=@forecast.id%>/10day"><h3 class='tenday' id='tendaylink'>10 Day Forecast</h3></a>||
-<%else%>
+  <%if @activeclass2%>
+  <a class='active' href="/forecasts/<%=@forecast.id%>/10day"><h3 class='tenday' id='tendaylink'>10 Day Forecast</h3></a>||
+  <%else%>
   <a href="/forecasts/<%=@forecast.id%>/10day"><h3 class='tenday' id='tendaylink'>10 Day Forecast</h3></a>||
-<%end%>
+  <%end%>
 
-<%if @activeclass3%>
- <a class='active' href="/forecasts/<%=@forecast.id%>/hourly/<%=@location%>"><h3 id='tendaylink'>Hourly Forecast</h3></a>||
-<%else%>
+  <%if @activeclass3%>
+  <a class='active' href="/forecasts/<%=@forecast.id%>/hourly/<%=@location%>"><h3 id='tendaylink'>Hourly Forecast</h3></a>||
+  <%else%>
   <a href="/forecasts/<%=@forecast.id%>/hourly/<%=@location%>"><h3 id='tendaylink'>Hourly Forecast</h3></a>||
-<%end%>
+  <%end%>
 
-<%if @activeclass4%>
-	<a class='active' href="/forecasts/<%=@forecast.id%>/hourly10day/<%=@location%>"><h3 id='tendaylink'>Hourly 10 day Forecast</h3></a>||
-<%else%>
+  <%if @activeclass4%>
+  <a class='active' href="/forecasts/<%=@forecast.id%>/hourly10day/<%=@location%>"><h3 id='tendaylink'>Hourly 10 day Forecast</h3></a>||
+  <%else%>
   <a href="/forecasts/<%=@forecast.id%>/hourly10day/<%=@location%>"><h3 id='tendaylink'>Hourly 10 day Forecast</h3></a>||
-<%end%>
+  <%end%>
 
-<%if @activeclass5%>
+  <%if @activeclass5%>
   <a class='active' href="/forecasts/<%=@forecast.id%>/history/<%=@location%>"><h3 id='tendaylink'>History</h3></a> 
-<%else%>
+  <%else%>
   <a href="/forecasts/<%=@forecast.id%>/history/<%=@location%>"><h3 id='tendaylink'>History</h3></a>  
   <%end%>
 </div>

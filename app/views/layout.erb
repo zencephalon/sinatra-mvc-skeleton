@@ -14,7 +14,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 
 
@@ -31,10 +31,7 @@
 <div class="demo">
 
   <header>
-    <!--   <a href="/"><img src="/img/zenchinese.png" class="logo"></a> -->
-
     <a href="/"><h1 class="logo"><mark class='marklogo'>we</mark>ather</h1></a>
-
 
     <div class='right-menu'>
       <%if !session[:id]%>
@@ -55,20 +52,16 @@
   </header>
 
   <body>
-
     <%= yield %>
-
   </body>
 
 </div>
 
 <div class="footer">
-
-<p class="copywrite">&copy; 2017 Weather</p>
-<a class="about" href="/users/about">about</a>
+  <p class="copywrite">&copy; 2017 Weather</p>
+  <a class="about" href="/users/about">about</a>
 </div>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Take me to the top</button>
-
 
 </html>

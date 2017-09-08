@@ -7,9 +7,7 @@
 <div class="wrapper">
   <div id='forecast-container'>
 
-
-    <%(0..236).each do |number|%>
-    
+    <%(0..236).each do |number|%>   
     <div class="forecast">
       <h3><mark class='forecastdate'><%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['weekday_name']%> <%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['mon']%>.<%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['mday']%>.<%=@weather_hourly['hourly_forecast'][number]['FCTTIME']['year']%></mark></h3>
       
