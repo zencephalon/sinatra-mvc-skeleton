@@ -13,7 +13,7 @@
 </form>
 
 <form id='history-form' method = "post" action="/history/<%=@forecast.id%>/<%=@location%>">
-	<input type="text" id="yesterday-daypicker" name="date" placeholder="mm/dd/yyyy">
+	<input type="text" class="yesterday-daypicker" name="date" placeholder="mm/dd/yyyy">
 	<input id="forecastbutton" class="yesterday-button" type = "submit", value = "weather yesterday">
 	<%= erb :'_errors' %>
 </form>

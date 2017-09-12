@@ -49,7 +49,7 @@ $( function() {
 });
 //Get yesterday's date.
 $( function() {
-  $( "#yesterday-daypicker" ).datepicker().datepicker("setDate", "-1D");
+  $( ".yesterday-daypicker" ).datepicker().datepicker("setDate", "-1D");
 
 });
 
