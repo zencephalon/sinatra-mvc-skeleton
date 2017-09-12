@@ -45,13 +45,14 @@ function topFunction() {
 
 
 $( function() {
-  $( ".yesterday-daypicker" ).datepicker().datepicker("setDate", "-1D");
-
-});
-$( function() {
   $( "#datepicker" ).datepicker({ minDate: "-30Y", maxDate: "-1D" });
 });
 //Get yesterday's date.
+$( function() {
+  $( ".yesterday-daypicker" ).datepicker({ minDate: "-30Y", maxDate: "-1D" });
+  // .datepicker().datepicker("setDate", "-1D");
+
+});
 
 // Confirm delete user profile. 
 function ConfirmDelete(){
