@@ -50,9 +50,7 @@ function topFunction() {
 //Get yesterday's date.
 
 $( function() {
-  $( "#datepicker" ).datepicker({ minDate: "-30Y", maxDate: "-1D" });
-  // .datepicker().datepicker("setDate", "-1D");
-
+  $( "#datepicker" ).datepicker().datepicker("setDate", "-1D");
 });
 
 // Confirm delete user profile. 
