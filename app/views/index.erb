@@ -12,7 +12,7 @@
 	<input class="input-field" type = "text" name = "forecast[country]" value="<%=@forecast.country%>"  placeholder="country or state">
 
 	<%if session[:id]%>
-	<input type="hidden" name="forecast[user_id]" value="<%=session[:id]%>">
+		<input type="hidden" name="forecast[user_id]" value="<%=session[:id]%>">
 	<%end%>
 	
 	<input type = "submit" id='forecastbutton', value = "forecast">
