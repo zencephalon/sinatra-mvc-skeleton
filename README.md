@@ -42,12 +42,12 @@ Upon opening the application users can directly check forecast for any city or r
 </p>
 
 <p align="center">
-<img src="/screenshots/mobileregister.png">
+<img src="/screenshots/mobileregister.png"><br>
 Mobile view of the register form.
 </p>
 
 <p align="center">
-<img src="/screenshots/mobileprofile.png">
+<img src="/screenshots/mobileprofile.png"><br>
 Mobile view of the user profile page.
 </p>
 

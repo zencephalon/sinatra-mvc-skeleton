@@ -1,18 +1,22 @@
-
 <h2><a href="/forecasts/new"><mark id='location'><%=@location%></mark></a></h2>
 
 <%=erb :'_menu'%>
 
 <div id="historydiv">
-<h2 id='registertext'>Get data up to 30 years back.</h2>
+	<h2 id='registertext'>Get data up to 30 years back.</h2>
 </div>
 
 <form id='history-form' method = "post" action="/history/<%=@forecast.id%>/<%=@location%>">
-<input type="text" id="datepicker" name="date" placeholder="mm/dd/yyyy">
-<input id="forecastbutton" type = "submit", value = "get data">
-<%= erb :'_errors' %>
+	<input type="text" id="datepicker" name="date" placeholder="mm/dd/yyyy">
+	<input id="forecastbutton" type = "submit", value = "get data">
+	<%= erb :'_errors' %>
 </form>
 
+<form id='history-form-yesterday' method = "post" action="/history/<%=@forecast.id%>/<%=@location%>">
+	<input type="hidden" id="datepicker1" name="date" placeholder="mm/dd/yyyy">
+	<input id="forecastbutton" class="yesterday-button" type = "submit", value = "weather yesterday">
+	<%= erb :'_errors' %>
+</form>
 
 
 

@@ -1,12 +1,3 @@
-#index get all users info
-# get '/users' do
-#   @users = User.all
-#   @users.map{|user| user.email.to_s}
-#   erb :'users/index'
-# end
-
-
-#new
 get '/users/new' do
    @user = User.new
   erb :'users/new'
@@ -64,9 +55,6 @@ put '/users/:id' do
   end
 end
 
-# patch '/users/:id' do
-#   update_user
-# end
 
 delete '/users/:id' do
   User.find(params[:id]).destroy!
