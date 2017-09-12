@@ -10,7 +10,7 @@ helpers do
 
       array << @current_forecast['current_observation']['weather'] + "\n"
       array << "Temp: "
-      array <<  @current_forecast['current_observation']['temp_c'].to_s + " C" + "\n"
+      array <<  @current_forecast['current_observation']['temp_c'].to_s + " ℃" + "\n"
       array <<  @current_forecast['current_observation']['temp_f'].to_s + " F" + "\n"
       array << "Wind: "
       array << @current_forecast['current_observation']['wind_mph'].to_s + " mph" + "\n"
