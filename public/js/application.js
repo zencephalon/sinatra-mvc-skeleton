@@ -49,8 +49,7 @@ $(function() {
 });
 //Get yesterday's date.
 $(function() {
-  $("#datepicker1").datepicker({ setDate: "-1D" });
-  // datepicker().datepicker("setDate", "-1D");
+  $("#datepicker1").datepicker().datepicker("setDate", "-1D");
 });
 
 // Confirm delete user profile. 
