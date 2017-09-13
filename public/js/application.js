@@ -45,8 +45,7 @@ function topFunction() {
 
 
 $( function() {
-  $( "#datepicker" ).datepicker().datepicker("setDate", "-1D");
-  // .datepicker({ minDate: "-30Y", maxDate: "-1D" });
+  $( "#datepicker" )..datepicker({ minDate: "-30Y", maxDate: "-1D" });
 });
 //Get yesterday's date.
 // $( function() {
