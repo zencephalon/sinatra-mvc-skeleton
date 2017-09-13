@@ -6,6 +6,7 @@ Weather
 https://weather--sms.herokuapp.com
 
 ## Description
+Get Weather Forecast via SMS!
 Weather is a fully responsive forecast application that utilizes Twilio and WU APIs, enabling users(registered with valid US phone number) to check weather using text messaging, when no internet is available or just for convenience.
 The forecasts available to all users are: 5 day, 10 day, hourly 5 day and hourly 10 day. In addition forecast history can be traced back up to 60 years for some cities. Registered users have the option to check their search history and edit or delete their accounts.
 
