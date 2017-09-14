@@ -815,6 +815,7 @@ a:active {
     font-size: 18px;
     margin-top: -8em;
     margin-left: 15%;
+
   }
 
   .right-menu{
@@ -830,6 +831,7 @@ a:active {
     display: block;
     margin-top: 0em;
     max-width: 85%;
+    margin-bottom: 5em;
   }
 
   #forecast-container{
@@ -845,6 +847,10 @@ a:active {
     margin: 0 auto;
     padding: 1em 1em;
     margin-bottom: 2em;  
+  }
+
+  #aboutdiv{
+    margin-bottom: 4em;
   }
 }
 
