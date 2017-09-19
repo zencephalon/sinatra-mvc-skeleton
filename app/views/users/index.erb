@@ -1,0 +1,18 @@
+<h1>All Users</h1>
+<div class="users">
+  <ul>
+    <% @users.each do |user| %>
+    <li><%= "#{user.username} - #{user.email}"%> - <a href="/users/<%=user.id %>">Show details</a>
+      <a href="/users/<%=user.id %>/edit">Edit</a>
+
+      <form method="post" action="/users/<%=user.id %>">
+        <input name="_method" type="hidden" value="delete" />
+        <input name="commit" type="submit" value="Delete"/>
+      </form>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+
+

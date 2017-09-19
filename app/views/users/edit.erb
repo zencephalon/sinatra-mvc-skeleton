@@ -1,0 +1,28 @@
+<h2 id=editheadline>Edit profile</h2>
+<div class = 'a'>
+  <form id='edit-form' method="post" action="/users/<%= @user.id %>">
+    <input type="hidden" name="_method" value="put" />
+
+    <label for="username">username:</label><br>
+    <input id="user_name" name="user[username]" type="text" value="<%= @user.username %>"><br>
+
+    <label for="user_email">Email</label><br>
+    <input id="user_email" name="user[email]" type="text" value="<%=@user.email %>"/><br>
+
+    <label for="user_phone_number">Phone</label><br>
+    <input id="user_phone" name="user[phone_number]" type="text" value="<%=@user.phone_number %>"/><br>
+
+    <label for="user_password">Password</label><br>
+    <input id="user_password" name="user[password]" type="password"/><br>
+
+    <input type="submit" value="Edit User" class="button">
+    <%= erb :'_errors' %>
+  </form>
+</div>
+
+<div class=datetime>
+  <div id='clock'>
+  </div>
+  <div id='date'>
+  </div>
+</div>

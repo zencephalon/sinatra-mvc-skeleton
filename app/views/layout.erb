@@ -11,26 +11,56 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
-  <!-- Load Vollkorn font -->
-  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway|Roboto' rel='stylesheet' type='text/css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="/js/application.js"></script>
+
 
   <title></title>
 </head>
-<body>
-<div id="content">
+
+<div class="demo">
+
   <header>
-    <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
-    <div id="login-toolbar">
-      <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% else %>
-        <a href="/login">Login</a>
-      <% end %>
+    <a href="/"><h1 class="logo"><mark class='marklogo'>we</mark>ather</h1></a>
+
+    <div class='right-menu'>
+      <%if !session[:id]%>
+        <a class="right-menu-button" href="/forecasts/new">Forecast</a>
+        <a class="right-menu-button" href="/sessions/new">Login</a> 
+        <a class="right-menu-button" href="/users/new">Register</a>
+      <%else%>
+        <a class="right-menu-button" href="/forecasts/new">Forecast</a>
+        <a  class="right-menu-button" href="/users/<%=current_user.id%>"><%=current_user.username%>'s profile</a>
+        <form id="logout-button" method = "post" action = "/sessions/<%=session[:id]%>">
+          <input type= "hidden" name = "_method" value="delete">
+          <button class="right-menu-button" type = "submit"> Log out </button>
+        </form>
+        <!--  <a href="/sessions/<%=session[:id]%>">logout</a> -->
+      <%end%>
+    </div>
+
   </header>
-  <%= yield %>
+  
+  <body>
+    <%= yield %>
+  </body>
 </div>
-</body>
+
+<div class="footer">
+  <p class="copywrite">&copy; 2017 Weather</p>
+  <a class="about" href="/users/about">about</a>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Take me to the top</button>
+
 </html>

@@ -1,0 +1,22 @@
+<a class="get-forecast" href="/forecasts/new">on your phone</a>
+
+
+<form id='register-form' method = "post" action = "/users">
+	<input class="input-field" type = "text" name = "user[username]" value="<%=@user.username %>" placeholder="username"><br>
+	<input class="input-field" type = "email" name = "user[email]" value="<%=@user.email %>" placeholder="email"><br>
+	<input class="input-field" type="phone-number" name="user[phone_number]" value="<%=@user.phone_number %>" placeholder="phone number(4156667777)"  pattern="[0-9]{10}"><br>
+	<input class="input-field" type = "password" name = "user[password]" placeholder="password"><br>
+	<input id="forecastbutton" type = "submit", value = "Register">
+
+	<%= erb :'_errors' %>
+</form>
+
+
+<div class='lasttext'>
+	<h2 id='registertext'>Register to check weather via sms!</h2>
+	<h2 id='registertext'>Get current weather and 5 day forecast for any location!</h2>
+	<h2 id='registertext'>Details will be sent to your phone.</h2>
+</div>
+
+
+

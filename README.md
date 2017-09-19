@@ -1,30 +1,62 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+Weather
+===
 
-### Purpose
-The Sinatra Skeleton:
+## Deployment
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+https://weather--sms.herokuapp.com
 
-### Quickstart
+## Description
+**Get Weather Forecast via SMS!**
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+Weather is a fully responsive forecast application that utilizes Twilio and WU APIs, enabling users(registered with valid US phone number) to check weather using text messaging, when no internet is available or just for convenience.
+The forecasts available to all users are: 5 day, 10 day, hourly 5 day and hourly 10 day. In addition forecast history can be traced back up to 60 years for some cities. Registered users have the option to check their search history and edit or delete their accounts.
 
-As needed, create models & migrations with the `rake` tasks:
+## Interface
 
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
+<p align="center">
+<img src="/screenshots/index.png">
+Upon opening the application users can directly check forecast for any city or register to use the SMS option.
+</p>
 
-### Contributing
+<p align="center">
+<img src="/screenshots/register.png">
+  Register page with some info.  
+</p>
 
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
+<p align="center">
+<img src="/screenshots/fiveday.png">
+  Five day forecast.  
+</p>
 
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
+<p align="center">
+<img src="/screenshots/midviewoftenday.png">
+  Mid view of ten day forecast.  
+</p> 
 
-Be prepared to give and receive specific, actionable, and kind feedback!
+<p align="center">
+<img src="/screenshots/historyform.png">
+  Form to check history.  
+</p>
+
+<p align="center">
+<img src="/screenshots/historyinfo.png">
+  History info for the date selected.  
+</p>
+
+<p align="center">
+<img src="/screenshots/mobileregister.png"><br>
+Mobile view of the register form.
+</p>
+
+<p align="center">
+<img src="/screenshots/mobileprofile.png"><br>
+Mobile view of the user profile page.
+</p>
+
+
+## Tech Stack
+Ruby, JavaScript, Jquery, Sinatra, HTML5, CSS3, WU and Twilio API
+### Dependencies for local development:
+
+* Ruby (2.3.1)
+* Sinatra (1.4.7)
